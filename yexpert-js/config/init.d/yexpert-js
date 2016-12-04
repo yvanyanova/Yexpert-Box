@@ -1,0 +1,85 @@
+#!/usr/bin/env bash
+#!----------------------------------------------------------------------------!
+#!                                                                            !
+#! Yexpert : (your) Système Expert sous Mumps GT.M et GNU/Linux               !
+#! Copyright (C) 2001-2015 by Hamid LOUAKED (HL).                             !
+#!                                                                            !
+#!----------------------------------------------------------------------------!
+
+# script init pour Yexpert-JS
+
+# Debian
+### BEGIN INIT INFO
+# Provides:          y-instanceyexpert-js
+# Required-Start:    $remote_fs $syslog $y-instanceyexpert
+# Required-Stop:     $remote_fs $syslog
+# Default-Start:     2 3 4 5
+# Default-Stop:      0 1 6
+# Short-Description: Lancer Yexpert-JS pour Yexpert au moment du démarrage
+# Description:       Services Starts/Stops Yexpert-JS pour Yexpert.
+### END INIT INFO
+
+# Assurez-vous que nous sommes en root
+if [[ $EUID -ne 0 ]]; then
+    echo "Ce script doit être exécuté en tant que root" 1>&2
+    exit 1
+fi
+
+# Variables d'environnement
+# Ce chemin sera remplacé par le $basedir correspondant à l'instance Yexpert
+# qui sera créée. Ce script devra avoir codé "en dur"
+source /home/y-instance/config/env
+export PATH=$PATH:/usr/local/bin
+
+# Démarrer les services Yexpert-JS
+start() {
+    # Lancer le debuggeur node-inspector
+    echo "Lancer le debuggeur node-inspector"
+    su $instance -c "source $basedir/.nvm/nvm.sh && source $basedir/config/env && nvm use $nodever && daemon --name node-inspector -O $basedir/log/node-inspectorOut.log -E $basedir/log/node-inspectorErr.log --chdir $basedir/yexpert-js  -X 'node-inspector --web-port 8089'"
+    # Lancer Yexpert-JS
+    ##echo "Lancer Yexpert-JS"
+    ##su $instance -c "source $basedir/.nvm/nvm.sh && source $basedir/config/env && nvm use $nodever && daemon --name yexpert-js -O $basedir/log/yexpert-jsOut.log -E $basedir/log/yexpert-jsErr.log --chdir $basedir/yexpert-js node ewdStart-gtm.js Yrelay-Config"
+    ##echo "Lancer EWD.js Rest Server"
+    ##su $instance -c "source $basedir/.nvm/nvm.sh && source $basedir/config/env && nvm use $nodever && daemon --name ewdRest -O $basedir/log/ewdRestOut.log -E $basedir/log/ewdRestErr.log --chdir $basedir/yexpert-js node $basedir/yexpert-js/ewdRest.js"
+    echo "Lancer yexpertrpc Server"
+    su $instance -c "source $basedir/.nvm/nvm.sh && source $basedir/config/env && nvm use $nodever && daemon --name yexpertrpc -O $basedir/log/yexpertrpcOut.log -E $basedir/log/yexpertrpcErr.log --chdir $basedir/yexpert-js node $basedir/yexpert-js/node_modules/yexpert-rpc/example/yexpertrpc.js"
+    echo "Lancer ewd-xpress Rest Server"
+    su $instance -c "source $basedir/.nvm/nvm.sh && source $basedir/config/env && nvm use $nodever && daemon --name ewd-xpress -O $basedir/log/ewd-xpressOut.log -E $basedir/log/ewd-xpressErr.log --chdir $basedir/yexpert-js node $basedir/yexpert-js/ewd-xpress.js Yrelay-Config"
+    echo "Starting EWD Yexpert Term Server"
+    su $instance -c "source $basedir/.nvm/nvm.sh && source $basedir/config/env && nvm use $nodever && cd $basedir/yexpert-js && daemon --name yexpert-term -O $basedir/log/yexpert-termOut.log -E $basedir/log/yexpert-termErr.log --chdir $basedir/yexpert-js node $basedir/yexpert-js/yexpert-termStart.js"
+}
+
+# Stopper les services Yexpert-JS
+stop() {
+    # Stopper EWD.js
+    echo "Arrêter EWD.js"
+    #curl "https://127.0.0.1:8080/ewdjsMgr?password=keepThisSecret%21&exit=true" -k
+    curl "https://127.0.0.1:8080/ewd/ewdMonitor/index.html?password=keepThisSecret!&exit=true#" -k
+    echo "Arrêter le serveur Yexpert-Term"
+    su $instance -c "source $basedir/.nvm/nvm.sh && source $basedir/config/env && nvm use $nodever && daemon --name yexpert-term --stop"
+    echo "Arrêter le serveur EWD.js Rest"
+    su $instance -c "source $basedir/.nvm/nvm.sh && source $basedir/config/env && nvm use $nodever && daemon --name ewdRest --stop"
+    echo "Arrêter le serveur Yexpert-JS"
+    su $instance -c "source $basedir/.nvm/nvm.sh && source $basedir/config/env && nvm use $nodever && daemon --name yexpert-js --stop"
+
+    # Stopper le debuggeur node-inspector
+    echo "Arrêter le debuggeur node-inspector"
+    su $instance -c "source $basedir/.nvm/nvm.sh && source $basedir/config/env && nvm use $nodever && daemon --name node-inspector --stop"
+}
+
+case "$1" in
+    start)
+        start
+        ;;
+    stop)
+        stop
+        ;;
+    restart)
+        stop
+        sleep 5
+        start
+        ;;
+    *)
+        echo "Usage: $0 {start|stop|restart}"
+        ;;
+esac
