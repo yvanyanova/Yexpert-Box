@@ -145,7 +145,6 @@ echo "18/20 body-parser"
 su $instance -c "source $basedir/.nvm/nvm.sh && source $basedir/config/env && nvm use $nodever && npm install --quiet body-parser >> $basedir/log/installerBody-parser.log"
 
 
-
 echo "19/20 yexpert-js"
 su $instance -c "source $basedir/.nvm/nvm.sh && source $basedir/config/env && nvm use $nodever && npm install --quiet yexpert-js >> $basedir/log/installeryexpert-js.log"
 ##echo "6/9 ewdliteclient"
@@ -154,8 +153,8 @@ su $instance -c "source $basedir/.nvm/nvm.sh && source $basedir/config/env && nv
 ##su $instance -c "source $basedir/.nvm/nvm.sh && source $basedir/config/env && nvm use $nodever && npm install --quiet ewdrest >> $basedir/log/installerEwdrest.log"
 echo "19/20 yexpert-term"
 su $instance -c "source $basedir/.nvm/nvm.sh && source $basedir/config/env && nvm use $nodever && npm install --quiet yexpert-term >> $basedir/log/installerYexpert-term.log"
-echo "20/20 node-inspector"
-su $instance -c "source $basedir/.nvm/nvm.sh && source $basedir/config/env && nvm use $nodever && npm install --quiet -g node-inspector >> $basedir/log/installerNode-inspector.log"
+#echo "20/20 node-inspector"
+#su $instance -c "source $basedir/.nvm/nvm.sh && source $basedir/config/env && nvm use $nodever && npm install --quiet -g node-inspector >> $basedir/log/installerNode-inspector.log"
 
 # Créer le fichier bundle.js requis par l application
 echo "Créer le fichier bundle.js requis par l application"
