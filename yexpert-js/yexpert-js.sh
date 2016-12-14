@@ -156,6 +156,12 @@ su $instance -c "source $basedir/.nvm/nvm.sh && source $basedir/config/env && nv
 #echo "20/20 node-inspector"
 #su $instance -c "source $basedir/.nvm/nvm.sh && source $basedir/config/env && nvm use $nodever && npm install --quiet -g node-inspector >> $basedir/log/installerNode-inspector.log"
 
+
+# Certaines distributions linux installent nodejs non comme exécutable "node" mais comme "nodejs".
+# Dans ce cas, vous devez lier manuellement à "node", car de nombreux paquets sont programmés après le node "binaire". Quelque chose de similaire se produit également avec "python2" non lié à "python".
+# Dans ce cas, vous pouvez faire un lien symbolique facile. Pour les distributions linux qui installent des binaires de package dans /usr/bin, vous pouvez faire
+ln -s /usr/bin/nodejs /usr/bin/node
+
 # Créer le fichier bundle.js requis par l application
 echo "Créer le fichier bundle.js requis par l application"
 su $instance -c "cd $basedir/yexpert-js/www/yexpert && browserify -t [ babelify ] app.js -o bundle.js"

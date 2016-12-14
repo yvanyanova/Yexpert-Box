@@ -44,7 +44,7 @@ start() {
     echo "Lancer yexpertrpc Server"
     su $instance -c "source $basedir/.nvm/nvm.sh && source $basedir/config/env && nvm use $nodever && daemon --name yexpertrpc -O $basedir/log/yexpertrpcOut.log -E $basedir/log/yexpertrpcErr.log --chdir $basedir/yexpert-js node $basedir/yexpert-js/node_modules/yexpert-rpc/example/yexpertrpc.js"
     echo "Lancer ewd-xpress Rest Server"
-    su $instance -c "source $basedir/.nvm/nvm.sh && source $basedir/config/env && nvm use $nodever && daemon --name ewd-xpress-gtm -O $basedir/log/ewd-xpress-gtmOut.log -E $basedir/log/ewd-xpressErr.log --chdir $basedir/yexpert-js node $basedir/yexpert-js/ewd-xpress-gtm.js Yrelay-Config"
+    su $instance -c "source $basedir/.nvm/nvm.sh && source $basedir/config/env && nvm use $nodever && daemon --name ewd-xpress-gtm -O $basedir/log/ewd-xpress-gtmOut.log -E $basedir/log/ewd-xpress-gtmErr.log --chdir $basedir/yexpert-js node $basedir/yexpert-js/ewd-xpress-gtm.js Yrelay-Config"
     echo "Starting EWD Yexpert Term Server"
     su $instance -c "source $basedir/.nvm/nvm.sh && source $basedir/config/env && nvm use $nodever && cd $basedir/yexpert-js && daemon --name yexpert-term -O $basedir/log/yexpert-termOut.log -E $basedir/log/yexpert-termErr.log --chdir $basedir/yexpert-js node $basedir/yexpert-js/yexpert-termStart.js"
 }
