@@ -157,6 +157,16 @@ su $instance -c "source $basedir/.nvm/nvm.sh && source $basedir/config/env && nv
 #su $instance -c "source $basedir/.nvm/nvm.sh && source $basedir/config/env && nvm use $nodever && npm install --quiet -g node-inspector >> $basedir/log/installerNode-inspector.log"
 
 
+echo "../.. ewd-xpress-react"
+su $instance -c "source $basedir/.nvm/nvm.sh && source $basedir/config/env && nvm use $nodever && npm install --quiet -g ewd-xpress-react >> $basedir/log/installerEwd-xpress-react.log"
+echo "../.. react-bootstrap"
+su $instance -c "source $basedir/.nvm/nvm.sh && source $basedir/config/env && nvm use $nodever && npm install --quiet -g react-bootstrap >> $basedir/log/installerReact-bootstrap.log"
+echo "../.. react-dom"
+su $instance -c "source $basedir/.nvm/nvm.sh && source $basedir/config/env && nvm use $nodever && npm install --quiet -g react-dom >> $basedir/log/installerReact-dom.log"
+echo "../.. react-toastr"
+su $instance -c "source $basedir/.nvm/nvm.sh && source $basedir/config/env && nvm use $nodever && npm install --quiet -g react-toastr >> $basedir/log/installerReact-toastr.log"
+
+
 # Certaines distributions linux installent nodejs non comme exécutable "node" mais comme "nodejs".
 # Dans ce cas, vous devez lier manuellement à "node", car de nombreux paquets sont programmés après le node "binaire". Quelque chose de similaire se produit également avec "python2" non lié à "python".
 # Dans ce cas, vous pouvez faire un lien symbolique facile. Pour les distributions linux qui installent des binaires de package dans /usr/bin, vous pouvez faire
