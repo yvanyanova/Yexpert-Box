@@ -158,13 +158,13 @@ su $instance -c "source $basedir/.nvm/nvm.sh && source $basedir/config/env && nv
 
 
 echo "../.. ewd-xpress-react"
-su $instance -c "source $basedir/.nvm/nvm.sh && source $basedir/config/env && nvm use $nodever && npm install --quiet -g ewd-xpress-react >> $basedir/log/installerEwd-xpress-react.log"
+su $instance -c "source $basedir/.nvm/nvm.sh && source $basedir/config/env && nvm use $nodever && npm install --quiet ewd-xpress-react >> $basedir/log/installerEwd-xpress-react.log"
 echo "../.. react-bootstrap"
-su $instance -c "source $basedir/.nvm/nvm.sh && source $basedir/config/env && nvm use $nodever && npm install --quiet -g react-bootstrap >> $basedir/log/installerReact-bootstrap.log"
+su $instance -c "source $basedir/.nvm/nvm.sh && source $basedir/config/env && nvm use $nodever && npm install --quiet react-bootstrap >> $basedir/log/installerReact-bootstrap.log"
 echo "../.. react-dom"
-su $instance -c "source $basedir/.nvm/nvm.sh && source $basedir/config/env && nvm use $nodever && npm install --quiet -g react-dom >> $basedir/log/installerReact-dom.log"
+su $instance -c "source $basedir/.nvm/nvm.sh && source $basedir/config/env && nvm use $nodever && npm install --quiet react-dom >> $basedir/log/installerReact-dom.log"
 echo "../.. react-toastr"
-su $instance -c "source $basedir/.nvm/nvm.sh && source $basedir/config/env && nvm use $nodever && npm install --quiet -g react-toastr >> $basedir/log/installerReact-toastr.log"
+su $instance -c "source $basedir/.nvm/nvm.sh && source $basedir/config/env && nvm use $nodever && npm install --quiet react-toastr >> $basedir/log/installerReact-toastr.log"
 
 
 # Certaines distributions linux installent nodejs non comme exécutable "node" mais comme "nodejs".
