@@ -152,29 +152,48 @@ su $instance -c "source $basedir/.nvm/nvm.sh && source $basedir/config/env && nv
 ##echo "7/9 ewdrest"
 ##su $instance -c "source $basedir/.nvm/nvm.sh && source $basedir/config/env && nvm use $nodever && npm install --quiet ewdrest >> $basedir/log/installerEwdrest.log"
 echo "20/20 yexpert-term"
-su $instance -c "source $basedir/.nvm/nvm.sh && source $basedir/config/env && nvm use $nodever && npm install --quiet yexpert-term >> $basedir/log/installerYexpert-term.log"
+#######su $instance -c "source $basedir/.nvm/nvm.sh && source $basedir/config/env && nvm use $nodever && npm install --quiet yexpert-term >> $basedir/log/installerYexpert-term.log"
 #echo "20/20 node-inspector"
 #su $instance -c "source $basedir/.nvm/nvm.sh && source $basedir/config/env && nvm use $nodever && npm install --quiet -g node-inspector >> $basedir/log/installerNode-inspector.log"
 
 
 echo "../.. ewd-xpress-react"
 su $instance -c "source $basedir/.nvm/nvm.sh && source $basedir/config/env && nvm use $nodever && npm install --quiet ewd-xpress-react >> $basedir/log/installerEwd-xpress-react.log"
+
+echo "../.. react@"
+su $instance -c "source $basedir/.nvm/nvm.sh && source $basedir/config/env && nvm use $nodever && npm install --quiet react@ >> $basedir/log/installerReact@.log"
+echo "../.. react-dom@"
+su $instance -c "source $basedir/.nvm/nvm.sh && source $basedir/config/env && nvm use $nodever && npm install --quiet react-dom@ >> $basedir/log/installerReact-dom@.log"
 echo "../.. react-bootstrap"
 su $instance -c "source $basedir/.nvm/nvm.sh && source $basedir/config/env && nvm use $nodever && npm install --quiet react-bootstrap >> $basedir/log/installerReact-bootstrap.log"
+
 echo "../.. react-dom"
 su $instance -c "source $basedir/.nvm/nvm.sh && source $basedir/config/env && nvm use $nodever && npm install --quiet react-dom >> $basedir/log/installerReact-dom.log"
 echo "../.. react-toastr"
 su $instance -c "source $basedir/.nvm/nvm.sh && source $basedir/config/env && nvm use $nodever && npm install --quiet react-toastr >> $basedir/log/installerReact-toastr.log"
-
+echo "../.. react-json-inspector"
+su $instance -c "source $basedir/.nvm/nvm.sh && source $basedir/config/env && nvm use $nodever && npm install --quiet react-json-inspector >> $basedir/log/installerReact-json-inspector.log"
+echo "../.. moment"
+su $instance -c "source $basedir/.nvm/nvm.sh && source $basedir/config/env && nvm use $nodever && npm install --quiet moment >> $basedir/log/installerMoment.log"
+echo "../.. reactify"
+su $instance -c "source $basedir/.nvm/nvm.sh && source $basedir/config/env && nvm use $nodever && npm install --quiet reactify >> $basedir/log/installerReactify.log"
 
 # Certaines distributions linux installent nodejs non comme exécutable "node" mais comme "nodejs".
 # Dans ce cas, vous devez lier manuellement à "node", car de nombreux paquets sont programmés après le node "binaire". Quelque chose de similaire se produit également avec "python2" non lié à "python".
-# Dans ce cas, vous pouvez faire un lien symbolique facile. Pour les distributions linux qui installent des binaires de package dans /usr/bin, vous pouvez faire
+# Dans ce cas, vous pouvez faire un lien symbolique. Pour les distributions linux qui installent des binaires de package dans /usr/bin, vous pouvez faire
+if [ -h /usr/bin/node ]; then
+  rm -f /usr/bin/node
+fi
 ln -s /usr/bin/nodejs /usr/bin/node
 
 # Créer le fichier bundle.js requis par l application
 echo "Créer le fichier bundle.js requis par l application"
-su $instance -c "cd $basedir/yexpert-js/www/yexpert && browserify -t [ babelify ] app.js -o bundle.js"
+#su $instance -c "cd $basedir/yexpert-js/www/yexpert && browserify -t [ babelify ] app.js -o bundle.js"
+su $instance -c "cd $basedir/yexpert-js/node_modules/yexpert-js/www/js && browserify -g [ reactify ] app.js -o bundle.js"
+su $instance -c "cp -f $basedir/yexpert-js/node_modules/yexpert-js/www/js/bundle.js $basedir/yexpert-js/www/yexpert/bundle.js"
+su $instance -c "cp -f $basedir/yexpert-js/node_modules/yexpert-js/www/index.html $basedir/yexpert-js/www/yexpert/index.html"
+su $instance -c "cp -f $basedir/yexpert-js/node_modules/yexpert-js/www/css/json-inspector.css $basedir/yexpert-js/www/yexpert/json-inspector.css"
+su $instance -c "cp -f $basedir/yexpert-js/node_modules/yexpert-js/www/css/Select.css $basedir/yexpert-js/www/yexpert/Select.css"
 
 # ewd-express
 echo "Copier les fichiers ewd-express"
