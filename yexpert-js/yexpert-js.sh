@@ -175,7 +175,7 @@ echo "30/31 uglify-js"
 su $instance -c "source $basedir/.nvm/nvm.sh && source $basedir/config/env && nvm use $nodever && npm install --quiet -g uglify-js >> $basedir/log/installerUglify-js.log"
 # Installer sur $basedir/www/yexpert - yexpert-js doit-être installé
 echo "31/31 babel-preset-es2015"
-su $instance -c "source $basedir/.nvm/nvm.sh && source $basedir/config/env && nvm use $nodever && cd $basedir/yexpert-js/www/yexpert && npm install --quiet -g babel-preset-es2015 >> $basedir/log/installerBabel-preset-es2015.log"
+su $instance -c "source $basedir/.nvm/nvm.sh && source $basedir/config/env && nvm use $nodever && cd $basedir/yexpert-js/www/yexpert && npm install --quiet babel-preset-es2015 >> $basedir/log/installerBabel-preset-es2015.log"
 
 
 
