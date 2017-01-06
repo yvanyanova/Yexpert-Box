@@ -173,20 +173,9 @@ echo "29/31 browserify" # http://doc.progysm.com/doc/browserify
 su $instance -c "source $basedir/.nvm/nvm.sh && source $basedir/config/env && nvm use $nodever && npm install --quiet -g browserify >> $basedir/log/installerBrowserify.log"
 echo "30/31 uglify-js"
 su $instance -c "source $basedir/.nvm/nvm.sh && source $basedir/config/env && nvm use $nodever && npm install --quiet -g uglifyjs >> $basedir/log/installerUglifyjs.log"
-
-
 # Installer sur $basedir/www/yexpert - yexpert-js doit-être installé
 echo "31/31 babel-preset-es2015"
-su $instance -c "source $basedir/.nvm/nvm.sh && source $basedir/config/env && nvm use $nodever && cd $basedir/yexpert-js/www/yexpert && ls -la && npm install --save-dev --quiet babel-preset-es2015 >> $basedir/log/installerBabel-preset-es2015.log"
-# Créer la configuration .babelrc (Recommended)
-cat > $basedir/yexpert-js/www/yexpert/.babelrc << EOF
-{
-  "presets": ["es2015"]
-}
-EOF
-# Mettre les droits corrects
-chown $instance:$instance $basedir/yexpert-js/www/yexpert/.babelrc
-
+su $instance -c "source $basedir/.nvm/nvm.sh && source $basedir/config/env && nvm use $nodever && cd $basedir/yexpert-js/www/yexpert && npm install --quiet babel-preset-es2015 >> $basedir/log/installerBabel-preset-es2015.log"
 
 # Certaines distributions linux installent nodejs non comme exécutable "node" mais comme "nodejs".
 # Dans ce cas, vous devez lier manuellement à "node", car de nombreux paquets sont programmés après le node "binaire". Quelque chose de similaire se produit également avec "python2" non lié à "python".
