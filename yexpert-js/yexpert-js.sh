@@ -103,85 +103,83 @@ chown $instance:$instance $basedir/yexpert-js/yexpert-jsSilent.js
 
 # Installer les modules de node requis
 cd $basedir/yexpert-js
-echo "1/31 express"
+echo "1/32 express"
 su $instance -c "source $basedir/.nvm/nvm.sh && source $basedir/config/env && nvm use $nodever && npm install --quiet express >> $basedir/log/installerExpress.log"
-echo "2/31 toastr"
+echo "2/32 toastr"
 su $instance -c "source $basedir/.nvm/nvm.sh && source $basedir/config/env && nvm use $nodever && npm install --quiet toastr >> $basedir/log/installerToastr.log"
-echo "3/31 body-parser"
+echo "3/32 body-parser"
 su $instance -c "source $basedir/.nvm/nvm.sh && source $basedir/config/env && nvm use $nodever && npm install --quiet body-parser >> $basedir/log/installerBody-parser.log"
-echo "4/31 moment"
+echo "4/32 moment"
 su $instance -c "source $basedir/.nvm/nvm.sh && source $basedir/config/env && nvm use $nodever && npm install --quiet moment >> $basedir/log/installerMoment.log"
-echo "5/31 reactify"
+echo "5/32 reactify"
 su $instance -c "source $basedir/.nvm/nvm.sh && source $basedir/config/env && nvm use $nodever && npm install --quiet reactify >> $basedir/log/installerReactify.log"
-#echo "9/31 bootstrap@3"
+#echo "9/32 bootstrap@3"
 #su $instance -c "source $basedir/.nvm/nvm.sh && source $basedir/config/env && nvm use $nodever && npm install --quiet bootstrap@3 >> $basedir/log/installerBootstrap@3.log"
 
-echo "6/31 nodem"
+echo "6/32 nodem"
 su $instance -c "source $basedir/.nvm/nvm.sh && source $basedir/config/env && nvm use $nodever && npm install --quiet nodem >> $basedir/log/installerNodem.log"
 
 # Installer les modules de node ewd
-echo "7/31 ewd-qoper8-express"
+echo "7/32 ewd-qoper8-express"
 su $instance -c "source $basedir/.nvm/nvm.sh && source $basedir/config/env && nvm use $nodever && npm install --quiet ewd-qoper8-express >> $basedir/log/installerEwd-qoper8-express.log"
-echo "8/31 ewd-xpress"
+echo "8/32 ewd-xpress"
 su $instance -c "source $basedir/.nvm/nvm.sh && source $basedir/config/env && nvm use $nodever && npm install --quiet ewd-xpress >> $basedir/log/installerEwd-xpress.log"
-echo "9/31 ewd-xpress-monitor"
+echo "9/32 ewd-xpress-monitor"
 su $instance -c "source $basedir/.nvm/nvm.sh && source $basedir/config/env && nvm use $nodever && npm install --quiet ewd-xpress-monitor >> $basedir/log/installerEwd-xpress-monitor.log"
-echo "10/31 ewd-qoper8"
+echo "10/32 ewd-qoper8"
 su $instance -c "source $basedir/.nvm/nvm.sh && source $basedir/config/env && nvm use $nodever && npm install --quiet ewd-qoper8 >> $basedir/log/installerEwd-qoper8.log"
-echo "11/31 ewd-session"
+echo "11/32 ewd-session"
 su $instance -c "source $basedir/.nvm/nvm.sh && source $basedir/config/env && nvm use $nodever && npm install --quiet ewd-session >> $basedir/log/installerEwd-session.log"
-echo "12/31 ewd-document-store"
+echo "12/32 ewd-document-store"
 su $instance -c "source $basedir/.nvm/nvm.sh && source $basedir/config/env && nvm use $nodever && npm install --quiet ewd-document-store >> $basedir/log/installerEwd-document-store.log"
 
 # Installer les modules yexpert
-echo "13/31 yexpert-js"
+echo "13/32 yexpert-js"
 su $instance -c "source $basedir/.nvm/nvm.sh && source $basedir/config/env && nvm use $nodever && npm install --quiet yexpert-js >> $basedir/log/installeryexpert-js.log"
-echo "14/31 yexpert-term"
+echo "14/32 yexpert-term"
 su $instance -c "source $basedir/.nvm/nvm.sh && source $basedir/config/env && nvm use $nodever && npm install --quiet yexpert-term >> $basedir/log/installerYexpert-term.log"
-echo "15/31 yexpert-rpc"
+echo "15/32 yexpert-rpc"
 su $instance -c "source $basedir/.nvm/nvm.sh && source $basedir/config/env && nvm use $nodever && npm install --quiet yexpert-rpc >> $basedir/log/installerYexpert-rpc.log"
-echo "16/31 yexpert-gtm"
+echo "16/32 yexpert-gtm"
 su $instance -c "source $basedir/.nvm/nvm.sh && source $basedir/config/env && nvm use $nodever && npm install --quiet yexpert-gtm >> $basedir/log/installerEwd-qoper8-gtm.log"
 
 # Configurer un environnement de développement ewd-xpress/React.js
-echo "17/31 react"
+echo "17/32 react"
 su $instance -c "source $basedir/.nvm/nvm.sh && source $basedir/config/env && nvm use $nodever && npm install --quiet react >> $basedir/log/installerReact.log"
-echo "18/31 react-dom"
+echo "18/32 react-dom"
 su $instance -c "source $basedir/.nvm/nvm.sh && source $basedir/config/env && nvm use $nodever && npm install --quiet react-dom >> $basedir/log/installerReact-dom.log"
-echo "19/31 react-json-inspector"
+echo "19/32 react-json-inspector"
 su $instance -c "source $basedir/.nvm/nvm.sh && source $basedir/config/env && nvm use $nodever && npm install --quiet react-json-inspector >> $basedir/log/installerReact-json-inspector.log"
-echo "20/31 babelify"
+echo "20/32 babelify"
 su $instance -c "source $basedir/.nvm/nvm.sh && source $basedir/config/env && nvm use $nodever && npm install --quiet --save-dev babelify >> $basedir/log/installerBabelify.log"
-echo "21/31 babel-preset-react"
+echo "21/32 babel-preset-react"
 su $instance -c "source $basedir/.nvm/nvm.sh && source $basedir/config/env && nvm use $nodever && npm install --quiet --save-dev babel-preset-react >> $basedir/log/installerBabel-preset-react.log"
-echo "22/31 react-bootstrap"
+echo "22/32 react-bootstrap"
 su $instance -c "source $basedir/.nvm/nvm.sh && source $basedir/config/env && nvm use $nodever && npm install --quiet react-bootstrap >> $basedir/log/installerReact-bootstrap.log"
-echo "23/31 react-toastr"
+echo "23/32 react-toastr"
 su $instance -c "source $basedir/.nvm/nvm.sh && source $basedir/config/env && nvm use $nodever && npm install --quiet react-toastr >> $basedir/log/installerReact-toastr.log"
-echo "24/31 react-select"
+echo "24/32 react-select"
 su $instance -c "source $basedir/.nvm/nvm.sh && source $basedir/config/env && nvm use $nodever && npm install --quiet react-select >> $basedir/log/installerReact-select.log"
-echo "25/31 socket.io-client"
+echo "25/32 socket.io-client"
 su $instance -c "source $basedir/.nvm/nvm.sh && source $basedir/config/env && nvm use $nodever && npm install --quiet socket.io-client >> $basedir/log/installerSocket.io-client.log"
-echo "26/31 jquery"
+echo "26/32 jquery"
 su $instance -c "source $basedir/.nvm/nvm.sh && source $basedir/config/env && nvm use $nodever && npm install --quiet jquery >> $basedir/log/installerJquery.log"
-echo "27/31 ewd-client"
+echo "27/32 ewd-client"
 su $instance -c "source $basedir/.nvm/nvm.sh && source $basedir/config/env && nvm use $nodever && npm install --quiet ewd-client >> $basedir/log/installerEwd-client.log"
-echo "28/31 ewd-xpress-react"
+echo "28/32 ewd-xpress-react"
 su $instance -c "source $basedir/.nvm/nvm.sh && source $basedir/config/env && nvm use $nodever && npm install --quiet ewd-xpress-react >> $basedir/log/installerEwd-xpress-react.log"
 # Installer en mode global
-echo "29/31 browserify" # http://doc.progysm.com/doc/browserify
-##su $instance -c "source $basedir/.nvm/nvm.sh && source $basedir/config/env && nvm use $nodever && npm install --quiet -g browserify >> $basedir/log/installerBrowserify.log"
-npm install --quiet -g browserify >> $basedir/log/installerBrowserify.log
-chown $instance:$instance $basedir/log/installerBrowserify.log
-echo "30/31 uglify-js"
-##su $instance -c "source $basedir/.nvm/nvm.sh && source $basedir/config/env && nvm use $nodever && npm install --quiet -g uglifyjs >> $basedir/log/installerUglifyjs.log"
-npm install --quiet -g uglifyjs >> $basedir/log/installerUglifyjs.log
-chown $instance:$instance $basedir/log/installerUglifyjs.log
-# Installer sur cd $basedir/yexpert-js/www/yexpert - yexpert-js doit-être installé *******************
-echo "31/31 babel-preset-es2015"
+echo "29/32 browserify" # http://doc.progysm.com/doc/browserify
+npm install --quiet -g browserify >> $basedir/log/installerBrowserify.log && chown $instance:$instance $basedir/log/installerBrowserify.log
+echo "30/32 uglify-js"
+npm install --quiet -g uglifyjs >> $basedir/log/installerUglifyjs.log && chown $instance:$instance $basedir/log/installerUglifyjs.log
+# Installer transformer
+echo "31/32 babel-preset-es2015"
 su $instance -c "source $basedir/.nvm/nvm.sh && source $basedir/config/env && nvm use $nodever && npm install --quiet --save-dev babel-preset-es2015 >> $basedir/log/installerBabel-preset-es2015.log"
-echo "31/31 transform-object-rest-spread"
-su $instance -c "source $basedir/.nvm/nvm.sh && source $basedir/config/env && nvm use $nodever && npm install --quiet --save-dev transform-object-rest-spread >> $basedir/log/installerTransform-object-rest-spread.log"
+echo "32/32 babel-plugin-transform-object-rest-spread"
+su $instance -c "source $basedir/.nvm/nvm.sh && source $basedir/config/env && nvm use $nodever && npm install --quiet --save-dev transform-object-rest-spread >> $basedir/log/installerBabel-plugin-transform-object-rest-spread.log"
+
+
 
 # Certaines distributions linux installent nodejs non comme exécutable "node" mais comme "nodejs".
 # Dans ce cas, vous devez lier manuellement à "node", car de nombreux paquets sont programmés après le node "binaire". Quelque chose de similaire se produit également avec "python2" non lié à "python".
