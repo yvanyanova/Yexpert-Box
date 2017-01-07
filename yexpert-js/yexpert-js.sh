@@ -151,9 +151,9 @@ su $instance -c "source $basedir/.nvm/nvm.sh && source $basedir/config/env && nv
 echo "19/31 react-json-inspector"
 su $instance -c "source $basedir/.nvm/nvm.sh && source $basedir/config/env && nvm use $nodever && npm install --quiet react-json-inspector >> $basedir/log/installerReact-json-inspector.log"
 echo "20/31 babelify"
-su $instance -c "source $basedir/.nvm/nvm.sh && source $basedir/config/env && nvm use $nodever && npm install --quiet babelify >> $basedir/log/installerBabelify.log"
+su $instance -c "source $basedir/.nvm/nvm.sh && source $basedir/config/env && nvm use $nodever && npm install --quiet --save-dev babelify >> $basedir/log/installerBabelify.log"
 echo "21/31 babel-preset-react"
-su $instance -c "source $basedir/.nvm/nvm.sh && source $basedir/config/env && nvm use $nodever && npm install --quiet babel-preset-react >> $basedir/log/installerBabel-preset-react.log"
+su $instance -c "source $basedir/.nvm/nvm.sh && source $basedir/config/env && nvm use $nodever && npm install --quiet --save-dev babel-preset-react >> $basedir/log/installerBabel-preset-react.log"
 echo "22/31 react-bootstrap"
 su $instance -c "source $basedir/.nvm/nvm.sh && source $basedir/config/env && nvm use $nodever && npm install --quiet react-bootstrap >> $basedir/log/installerReact-bootstrap.log"
 echo "23/31 react-toastr"
@@ -179,7 +179,7 @@ npm install --quiet -g uglifyjs >> $basedir/log/installerUglifyjs.log
 chown $instance:$instance $basedir/log/installerUglifyjs.log
 # Installer sur cd $basedir/yexpert-js/www/yexpert - yexpert-js doit-être installé *******************
 echo "31/31 babel-preset-es2015"
-su $instance -c "source $basedir/.nvm/nvm.sh && source $basedir/config/env && nvm use $nodever && npm install --quiet babel-preset-es2015 >> $basedir/log/installerBabel-preset-es2015.log"
+su $instance -c "source $basedir/.nvm/nvm.sh && source $basedir/config/env && nvm use $nodever && npm install --quiet --save-dev babel-preset-es2015 >> $basedir/log/installerBabel-preset-es2015.log"
 
 # Certaines distributions linux installent nodejs non comme exécutable "node" mais comme "nodejs".
 # Dans ce cas, vous devez lier manuellement à "node", car de nombreux paquets sont programmés après le node "binaire". Quelque chose de similaire se produit également avec "python2" non lié à "python".
@@ -193,17 +193,19 @@ ln -s /usr/bin/nodejs /usr/bin/node
 ##echo "Créer le fichier bundle.js requis par l application"
 ####su $instance -c "cd $basedir/yexpert-js/node_modules/yexpert-js/www/js && browserify -g [ reactify ] app.js -o bundle.js"
 su $instance -c "cd $basedir/yexpert-js/node_modules/yexpert-js && rm -rf build && mkdir build"
-# Mettre les droits corrects
-chown -R $instance:$instance $basedir/yexpert-js/node_modules/yexpert/build
 su $instance -c "cd $basedir/yexpert-js/node_modules/yexpert-js/src/js && browserify -t [ babelify --compact false --presets [es2015 react] ] app.js | uglifyjs > ../../build/bundle.js"
 su $instance -c "cd $basedir/yexpert-js/node_modules/yexpert-js && cp -f src/index.html build/index.html"
 su $instance -c "cd $basedir/yexpert-js/node_modules/yexpert-js && cp -f src/css/json-inspector.css build/json-inspector.css"
 su $instance -c "cd $basedir/yexpert-js/node_modules/yexpert-js && cp -f src/css/Select.css build/Select.css"
 su $instance -c "cd $basedir/yexpert-js/node_modules/yexpert-js && cp -rf src/images build/images"
-if [ ! -d "$basedir/yexpert-js/www/yexpert" ];then
-su $instance -c "mkdr $basedir/yexpert-js/www/yexpert && cp -rf $basedir/yexpert-js/node_modules/yexpert-js/build/*.* $basedir/yexpert-js/www/yexpert"
-# Mettre les droits corrects
+# Mettre les droits
 chown -R $instance:$instance $basedir/yexpert-js/www/yexpert
+chmod -R g+rw $basedir/yexpert-js/node_modules/yexpert-js/build
+if [ ! -d "$basedir/yexpert-js/www/yexpert" ];then
+su $instance -c "mkdir $basedir/yexpert-js/www/yexpert && cp -rf $basedir/yexpert-js/node_modules/yexpert-js/build/* $basedir/yexpert-js/www/yexpert"
+# Mettre les droits
+chown -R $instance:$instance $basedir/yexpert-js/www/yexpert
+chmod -R g+rw $basedir/yexpert-js/www/yexpert
 fi
 
 # ewd-express
