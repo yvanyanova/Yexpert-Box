@@ -177,9 +177,9 @@ echo "30/31 uglify-js"
 ##su $instance -c "source $basedir/.nvm/nvm.sh && source $basedir/config/env && nvm use $nodever && npm install --quiet -g uglifyjs >> $basedir/log/installerUglifyjs.log"
 npm install --quiet -g uglifyjs >> $basedir/log/installerUglifyjs.log
 chown $instance:$instance $basedir/log/installerUglifyjs.log
-# Installer sur $basedir/www/yexpert - yexpert-js doit-être installé
+# Installer sur cd $basedir/yexpert-js/www/yexpert - yexpert-js doit-être installé *******************
 echo "31/31 babel-preset-es2015"
-su $instance -c "source $basedir/.nvm/nvm.sh && source $basedir/config/env && nvm use $nodever && cd $basedir/yexpert-js/www/yexpert && npm install --quiet babel-preset-es2015 >> $basedir/log/installerBabel-preset-es2015.log"
+su $instance -c "source $basedir/.nvm/nvm.sh && source $basedir/config/env && nvm use $nodever && npm install --quiet babel-preset-es2015 >> $basedir/log/installerBabel-preset-es2015.log"
 
 # Certaines distributions linux installent nodejs non comme exécutable "node" mais comme "nodejs".
 # Dans ce cas, vous devez lier manuellement à "node", car de nombreux paquets sont programmés après le node "binaire". Quelque chose de similaire se produit également avec "python2" non lié à "python".
@@ -192,11 +192,15 @@ ln -s /usr/bin/nodejs /usr/bin/node
 # Créer le fichier bundle.js requis par l application
 ##echo "Créer le fichier bundle.js requis par l application"
 ####su $instance -c "cd $basedir/yexpert-js/node_modules/yexpert-js/www/js && browserify -g [ reactify ] app.js -o bundle.js"
-##su $instance -c "cd $basedir/yexpert-js/node_modules/yexpert-js/www/js && browserify -t [ babelify --compact false --presets [es2015 react] ] app.js | uglifyjs > bundle.js"
-##su $instance -c "cp -f $basedir/yexpert-js/node_modules/yexpert-js/www/js/bundle.js $basedir/yexpert-js/www/yexpert/bundle.js"
-##su $instance -c "cp -f $basedir/yexpert-js/node_modules/yexpert-js/www/index.html $basedir/yexpert-js/www/yexpert/index.html"
-##su $instance -c "cp -f $basedir/yexpert-js/node_modules/yexpert-js/www/css/json-inspector.css $basedir/yexpert-js/www/yexpert/json-inspector.css"
-##su $instance -c "cp -f $basedir/yexpert-js/node_modules/yexpert-js/www/css/Select.css $basedir/yexpert-js/www/yexpert/Select.css"
+su $instance -c "cd $basedir/yexpert-js/node_modules/yexpert-js && rm -rf build && mkdir build"
+su $instance -c "cd $basedir/yexpert-js/node_modules/yexpert-js/src/js && browserify -t [ babelify --compact false --presets [es2015 react] ] app.js | uglifyjs > ../build/bundle.js"
+su $instance -c "cd $basedir/yexpert-js/node_modules/yexpert-js && cp -f src/index.html build/index.html"
+su $instance -c "cd $basedir/yexpert-js/node_modules/yexpert-js && cp -f src/css/json-inspector.css build/json-inspector.css"
+su $instance -c "cd $basedir/yexpert-js/node_modules/yexpert-js && cp -f src/css/Select.css build/Select.css"
+su $instance -c "cd $basedir/yexpert-js/node_modules/yexpert-js && cp -f src/images build/images"
+if [ ! -d "$basedir/yexpert-js/www/yexpert" ];then
+su $instance -c "mkdr $basedir/yexpert-js/www/yexpert && cp -rf $basedir/yexpert-js/node_modules/yexpert-js/build/*.* $basedir/yexpert-js/www/yexpert"
+fi
 
 # ewd-express
 echo "Copier les fichiers ewd-express"
