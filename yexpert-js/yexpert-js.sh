@@ -177,7 +177,7 @@ npm install --quiet -g uglifyjs >> $basedir/log/installerUglifyjs.log && chown $
 echo "31/32 babel-preset-es2015"
 su $instance -c "source $basedir/.nvm/nvm.sh && source $basedir/config/env && nvm use $nodever && npm install --quiet --save-dev babel-preset-es2015 >> $basedir/log/installerBabel-preset-es2015.log"
 echo "32/32 babel-plugin-transform-object-rest-spread"
-su $instance -c "source $basedir/.nvm/nvm.sh && source $basedir/config/env && nvm use $nodever && npm install --quiet --save-dev transform-object-rest-spread >> $basedir/log/installerBabel-plugin-transform-object-rest-spread.log"
+su $instance -c "source $basedir/.nvm/nvm.sh && source $basedir/config/env && nvm use $nodever && npm install --quiet --save-dev babel-plugin-transform-object-rest-spread >> $basedir/log/installerBabel-plugin-transform-object-rest-spread.log"
 
 
 
