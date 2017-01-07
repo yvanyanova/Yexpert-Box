@@ -193,13 +193,17 @@ ln -s /usr/bin/nodejs /usr/bin/node
 ##echo "Créer le fichier bundle.js requis par l application"
 ####su $instance -c "cd $basedir/yexpert-js/node_modules/yexpert-js/www/js && browserify -g [ reactify ] app.js -o bundle.js"
 su $instance -c "cd $basedir/yexpert-js/node_modules/yexpert-js && rm -rf build && mkdir build"
-su $instance -c "cd $basedir/yexpert-js/node_modules/yexpert-js/src/js && browserify -t [ babelify --compact false --presets [es2015 react] ] app.js | uglifyjs > ../build/bundle.js"
+# Mettre les droits corrects
+chown -R $instance:$instance $basedir/yexpert-js/node_modules/yexpert/build
+su $instance -c "cd $basedir/yexpert-js/node_modules/yexpert-js/src/js && browserify -t [ babelify --compact false --presets [es2015 react] ] app.js | uglifyjs > ../../build/bundle.js"
 su $instance -c "cd $basedir/yexpert-js/node_modules/yexpert-js && cp -f src/index.html build/index.html"
 su $instance -c "cd $basedir/yexpert-js/node_modules/yexpert-js && cp -f src/css/json-inspector.css build/json-inspector.css"
 su $instance -c "cd $basedir/yexpert-js/node_modules/yexpert-js && cp -f src/css/Select.css build/Select.css"
-su $instance -c "cd $basedir/yexpert-js/node_modules/yexpert-js && cp -f src/images build/images"
+su $instance -c "cd $basedir/yexpert-js/node_modules/yexpert-js && cp -rf src/images build/images"
 if [ ! -d "$basedir/yexpert-js/www/yexpert" ];then
 su $instance -c "mkdr $basedir/yexpert-js/www/yexpert && cp -rf $basedir/yexpert-js/node_modules/yexpert-js/build/*.* $basedir/yexpert-js/www/yexpert"
+# Mettre les droits corrects
+chown -R $instance:$instance $basedir/yexpert-js/www/yexpert
 fi
 
 # ewd-express
