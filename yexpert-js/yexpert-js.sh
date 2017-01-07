@@ -180,6 +180,8 @@ chown $instance:$instance $basedir/log/installerUglifyjs.log
 # Installer sur cd $basedir/yexpert-js/www/yexpert - yexpert-js doit-être installé *******************
 echo "31/31 babel-preset-es2015"
 su $instance -c "source $basedir/.nvm/nvm.sh && source $basedir/config/env && nvm use $nodever && npm install --quiet --save-dev babel-preset-es2015 >> $basedir/log/installerBabel-preset-es2015.log"
+echo "31/31 transform-object-rest-spread"
+su $instance -c "source $basedir/.nvm/nvm.sh && source $basedir/config/env && nvm use $nodever && npm install --quiet --save-dev transform-object-rest-spread >> $basedir/log/installerTransform-object-rest-spread.log"
 
 # Certaines distributions linux installent nodejs non comme exécutable "node" mais comme "nodejs".
 # Dans ce cas, vous devez lier manuellement à "node", car de nombreux paquets sont programmés après le node "binaire". Quelque chose de similaire se produit également avec "python2" non lié à "python".
