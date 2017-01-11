@@ -7,5 +7,6 @@ alias GTM="$gtm_dist/mumps -dir"
 alias gde="$gtm_dist/mumps -run GDE"
 alias lke="$gtm_dist/mumps -run LKE"
 alias dse="$gtm_dist/mumps -run DSE"
+#/home/yrelay/scripts/admin.sh
 #$gtm_dist/mumps -dir
-#$gtm_dist/mupip EXTRACT -SELECT=RPC /home/yrelay/tmp/RPC.zwr
+#$gtm_dist/mupip EXTRACT -SELECT=* /home/yrelay/tmp/yxp.zwr
