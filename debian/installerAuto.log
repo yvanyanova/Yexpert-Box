@@ -373,3 +373,11 @@ Cleaning up downloaded VirtualBox Guest Additions ISO...
 ==> Box Yexpert Debian: E
 ==> Box Yexpert Debian: : 
 ==> Box Yexpert Debian: Unable to fetch some archives, maybe run apt-get update or try with --fix-missing?
+==> Box Yexpert Debian: Extracting templates from packages: 12%
+==> Box Yexpert Debian: Extracting templates from packages: 25%
+==> Box Yexpert Debian: Extracting templates from packages: 38%
+==> Box Yexpert Debian: Extracting templates from packages: 51%
+==> Box Yexpert Debian: Extracting templates from packages: 64%
+==> Box Yexpert Debian: Extracting templates from packages: 76%
+==> Box Yexpert Debian: Extracting templates from packages: 89%
+==> Box Yexpert Debian: Extracting templates from packages: 100%
