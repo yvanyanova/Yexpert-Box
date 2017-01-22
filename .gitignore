@@ -10,3 +10,12 @@ testing/
 
 # Ignorer la version instable
 unstable/
+
+# Ignorer les logs
+log/
+*.log
+
+
+
+
+
