@@ -168,8 +168,8 @@ chown $instance:$instance $basedir/config/env
 # Envrionment source en shell bash
 grep "source $basedir/config/env" $basedir/.bashrc
 if [ "$?" = 0 ]; then
-    # si la ligne existe - ne rien faire
-    echo "La ligne existe, ne rien faire..."
+    # si la ligne existe dans .bashrc - ne rien faire
+    echo "La ligne existe dans .bashrc, ne rien faire..."
 else
     # si la ligne n'existe pas
     echo "source $basedir/config/env" >> $basedir/.bashrc

@@ -259,11 +259,11 @@ chmod g+x /home/$instance
 # Créer les variables d'environnement que devra utiliser $basedir
 source /home/$instance/config/env
 
-# Obtenir le répertoire personnel de l'utilisateur
-USER_HOME=$(getent passwd $SUDO_USER | cut -d: -f6)
+#HL170122# Obtenir le répertoire personnel de l'utilisateur
+#HL170122USER_HOME=$(getent passwd $SUDO_USER | cut -d: -f6)
 
-# Modifier le fichier .bashrc pour le script env soit lancé au démarrage
-echo "source $basedir/config/env" >> $USER_HOME/.bashrc
+#HL170122# Modifier le fichier .bashrc pour le script env soit lancé au démarrage
+#HL170122echo "source $basedir/config/env" >> $USER_HOME/.bashrc
 
 # Construire un environnement Yexpert et exécuter les tests pour vérifier l'installation
 # L'environnement Yexpert sera cloner depuis le dépot Yexpert-M
