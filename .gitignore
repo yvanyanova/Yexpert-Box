@@ -13,7 +13,7 @@ unstable/
 
 # Ignorer les logs
 log/
-debian/
+*.log
 
 
 
