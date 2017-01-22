@@ -29,23 +29,28 @@ echo "Installer Yexpert-JS"
 # Copier les scripts init.d dans le répertoite scripts de Yexpert
 su $instance -c "cp -R config $basedir"
 
-# Télécharger l'installateur dans le répertoire tmp
-cd $basedir/tmp
+#----# Télécharger l'installateur dans le répertoire tmp
+#----cd $basedir/tmp
 
-# Installer node.js en utilisant NVM (node version manager) - https://github.com/creationix/nvm
-echo "Télécharger l'installateur NVM"
-curl -s -k --remote-name -L  https://raw.githubusercontent.com/creationix/nvm/master/install.sh
-echo "Téléchargement l'installateur NVM terminé"
+#----# Installer node.js en utilisant NVM (node version manager) - https://github.com/creationix/nvm
+#----echo "Télécharger l'installateur NVM"
+#----curl -s -k --remote-name -L  https://raw.githubusercontent.com/creationix/nvm/master/install.sh
+#----echo "Téléchargement l'installateur NVM terminé"
 
-# Exécuter install.sh
-chmod +x install.sh
-su $instance -c "./install.sh"
+#----# Exécuter install.sh
+#----chmod +x install.sh
+#----su $instance -c "./install.sh"
 
-# Enlever install.sh
-rm -f ./install.sh
+#----# Enlever install.sh
+#----rm -f ./install.sh
 
 # Aller à $basedir
 cd $basedir
+
+# Installer node.js en utilisant NVM (node version manager) - https://github.com/creationix/nvm
+echo "Télécharger et installer NVM"
+su $instance -c "curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.30.1/install.sh | bash"
+echo "Installation de NVM terminé"
 
 # Installer node $nodever
 su $instance -c "source $basedir/.nvm/nvm.sh && nvm install $nodever > /dev/null 2>&1 && nvm alias default $nodever && nvm use default"

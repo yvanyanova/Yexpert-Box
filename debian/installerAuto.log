@@ -1,0 +1,206 @@
+Bringing machine 'Box Yexpert Debian' up with 'virtualbox' provider...
+==> Box Yexpert Debian: Importing base box 'debian/jessie64'...
+[KProgress: 10%[KProgress: 20%[KProgress: 30%[KProgress: 40%[KProgress: 60%[KProgress: 80%[KProgress: 90%[K==> Box Yexpert Debian: Matching MAC address for NAT networking...
+==> Box Yexpert Debian: Checking if box 'debian/jessie64' is up to date...
+==> Box Yexpert Debian: A newer version of the box 'debian/jessie64' is available! You currently
+==> Box Yexpert Debian: have version '8.2.2'. The latest is version '8.7.0'. Run
+==> Box Yexpert Debian: `vagrant box update` to update.
+==> Box Yexpert Debian: Setting the name of the VM: debian_BoxYexpertDebian_1485078887295_42622
+==> Box Yexpert Debian: Clearing any previously set network interfaces...
+==> Box Yexpert Debian: Preparing network interfaces based on configuration...
+    Box Yexpert Debian: Adapter 1: nat
+==> Box Yexpert Debian: Forwarding ports...
+    Box Yexpert Debian: 8080 => 8080 (adapter 1)
+    Box Yexpert Debian: 8081 => 8081 (adapter 1)
+    Box Yexpert Debian: 8082 => 8082 (adapter 1)
+    Box Yexpert Debian: 8083 => 8083 (adapter 1)
+    Box Yexpert Debian: 22 => 2222 (adapter 1)
+==> Box Yexpert Debian: Booting VM...
+==> Box Yexpert Debian: Waiting for machine to boot. This may take a few minutes...
+    Box Yexpert Debian: SSH address: 127.0.0.1:2222
+    Box Yexpert Debian: SSH username: vagrant
+    Box Yexpert Debian: SSH auth method: private key
+    Box Yexpert Debian: Warning: Connection reset. Retrying...
+    Box Yexpert Debian: Warning: Remote connection disconnect. Retrying...
+    Box Yexpert Debian: Warning: Connection reset. Retrying...
+    Box Yexpert Debian: Warning: Remote connection disconnect. Retrying...
+    Box Yexpert Debian: Warning: Connection reset. Retrying...
+    Box Yexpert Debian: Warning: Remote connection disconnect. Retrying...
+==> Box Yexpert Debian: Machine booted and ready!
+[Box Yexpert Debian] No installation found.
+stdin: is not a tty
+Reading package lists...
+Building dependency tree...
+Reading state information...
+The following extra packages will be installed:
+  binutils cpp cpp-4.8 cpp-4.9 fakeroot gcc gcc-4.8 gcc-4.9 libasan0 libasan1
+  libatomic1 libc-dev-bin libc6-dev libcilkrts5 libcloog-isl4 libfakeroot
+  libgcc-4.8-dev libgcc-4.9-dev libgomp1 libisl10 libitm1 liblsan0 libmpc3
+  libmpfr4 libquadmath0 libtsan0 libubsan0 linux-compiler-gcc-4.8-x86
+  linux-headers-3.16.0-4-common linux-headers-amd64 linux-kbuild-3.16
+  linux-libc-dev make manpages-dev
+Suggested packages:
+  binutils-doc cpp-doc gcc-4.8-locales gcc-4.9-locales gcc-multilib autoconf
+  automake libtool flex bison gdb gcc-doc gcc-4.8-multilib gcc-4.8-doc
+  libgcc1-dbg libgomp1-dbg libitm1-dbg libatomic1-dbg libasan0-dbg
+  libtsan0-dbg libquadmath0-dbg gcc-4.9-multilib gcc-4.9-doc libasan1-dbg
+  liblsan0-dbg libubsan0-dbg libcilkrts5-dbg glibc-doc make-doc
+Recommended packages:
+  linux-image
+The following NEW packages will be installed:
+  binutils cpp cpp-4.8 cpp-4.9 dkms fakeroot gcc gcc-4.8 gcc-4.9 libasan0
+  libasan1 libatomic1 libc-dev-bin libc6-dev libcilkrts5 libcloog-isl4
+  libfakeroot libgcc-4.8-dev libgcc-4.9-dev libgomp1 libisl10 libitm1 liblsan0
+  libmpc3 libmpfr4 libquadmath0 libtsan0 libubsan0 linux-compiler-gcc-4.8-x86
+  linux-headers-3.16.0-4-amd64 linux-headers-3.16.0-4-common
+  linux-headers-amd64 linux-kbuild-3.16 linux-libc-dev make manpages-dev
+0 upgraded, 36 newly installed, 0 to remove and 0 not upgraded.
+Need to get 40.2 MB of archives.
+After this operation, 153 MB of additional disk space will be used.
+Err http://security.debian.org/ jessie/updates/main linux-libc-dev amd64 3.16.7-ckt11-1+deb8u6
+  404  Not Found [IP: 195.20.242.89 80]
+Err http://security.debian.org/ jessie/updates/main linux-compiler-gcc-4.8-x86 amd64 3.16.7-ckt11-1+deb8u6
+  404  Not Found [IP: 195.20.242.89 80]
+Err http://security.debian.org/ jessie/updates/main linux-headers-3.16.0-4-common amd64 3.16.7-ckt11-1+deb8u6
+  404  Not Found [IP: 195.20.242.89 80]
+Err http://security.debian.org/ jessie/updates/main linux-headers-3.16.0-4-amd64 amd64 3.16.7-ckt11-1+deb8u6
+  404  Not Found [IP: 195.20.242.89 80]
+Get:1 http://httpredir.debian.org/debian/ jessie/main libasan0 amd64 4.8.4-1 [63.3 kB]
+Get:2 http://httpredir.debian.org/debian/ jessie/main libasan1 amd64 4.9.2-10 [195 kB]
+Get:3 http://httpredir.debian.org/debian/ jessie/main libatomic1 amd64 4.9.2-10 [8,992 B]
+Get:4 http://httpredir.debian.org/debian/ jessie/main libcilkrts5 amd64 4.9.2-10 [40.1 kB]
+Get:5 http://httpredir.debian.org/debian/ jessie/main libisl10 amd64 0.12.2-2 [440 kB]
+Get:6 http://httpredir.debian.org/debian/ jessie/main libcloog-isl4 amd64 0.18.2-1+b2 [61.8 kB]
+Get:7 http://httpredir.debian.org/debian/ jessie/main libgomp1 amd64 4.9.2-10 [37.8 kB]
+Get:8 http://httpredir.debian.org/debian/ jessie/main libitm1 amd64 4.9.2-10 [29.2 kB]
+Get:9 http://httpredir.debian.org/debian/ jessie/main liblsan0 amd64 4.9.2-10 [92.8 kB]
+Get:10 http://httpredir.debian.org/debian/ jessie/main libmpfr4 amd64 3.1.2-2 [527 kB]
+Get:11 http://httpredir.debian.org/debian/ jessie/main libquadmath0 amd64 4.9.2-10 [129 kB]
+Get:12 http://httpredir.debian.org/debian/ jessie/main libtsan0 amd64 4.9.2-10 [212 kB]
+Get:13 http://httpredir.debian.org/debian/ jessie/main libubsan0 amd64 4.9.2-10 [82.4 kB]
+Get:14 http://httpredir.debian.org/debian/ jessie/main libmpc3 amd64 1.0.2-1 [39.3 kB]
+Get:15 http://httpredir.debian.org/debian/ jessie/main binutils amd64 2.25-5 [3,516 kB]
+Get:16 http://httpredir.debian.org/debian/ jessie/main cpp-4.9 amd64 4.9.2-10 [5,169 kB]
+Get:17 http://httpredir.debian.org/debian/ jessie/main cpp amd64 4:4.9.2-2 [17.3 kB]
+Get:18 http://httpredir.debian.org/debian/ jessie/main cpp-4.8 amd64 4.8.4-1 [4,577 kB]
+Get:19 http://httpredir.debian.org/debian/ jessie/main libgcc-4.9-dev amd64 4.9.2-10 [2,066 kB]
+Get:20 http://httpredir.debian.org/debian/ jessie/main gcc-4.9 amd64 4.9.2-10 [5,352 kB]
+Get:21 http://httpredir.debian.org/debian/ jessie/main gcc amd64 4:4.9.2-2 [5,136 B]
+Get:22 http://httpredir.debian.org/debian/ jessie/main make amd64 4.0-8.1 [349 kB]
+Get:23 http://httpredir.debian.org/debian/ jessie/main dkms all 2.2.0.3-2 [70.9 kB]
+Get:24 http://httpredir.debian.org/debian/ jessie/main libfakeroot amd64 1.20.2-1 [44.7 kB]
+Get:25 http://httpredir.debian.org/debian/ jessie/main fakeroot amd64 1.20.2-1 [84.7 kB]
+Get:26 http://httpredir.debian.org/debian/ jessie/main libgcc-4.8-dev amd64 4.8.4-1 [1,689 kB]
+Get:27 http://httpredir.debian.org/debian/ jessie/main gcc-4.8 amd64 4.8.4-1 [4,787 kB]
+Err http://httpredir.debian.org/debian/ jessie/main libc-dev-bin amd64 2.19-18+deb8u1
+  404  Not Found
+Err http://httpredir.debian.org/debian/ jessie/main libc6-dev amd64 2.19-18+deb8u1
+  404  Not Found
+Err http://httpredir.debian.org/debian/ jessie/main linux-kbuild-3.16 amd64 3.16-3
+  404  Not Found
+Get:28 http://httpredir.debian.org/debian/ jessie/main linux-headers-amd64 amd64 3.16+63 [5,050 B]
+Get:29 http://httpredir.debian.org/debian/ jessie/main manpages-dev all 3.74-1 [1,865 kB]
+Fetched 31.6 MB in 37s (837 kB/s)
+E: Failed to fetch http://httpredir.debian.org/debian/pool/main/g/glibc/libc-dev-bin_2.19-18+deb8u1_amd64.deb  404  Not Found
+
+E: Failed to fetch http://security.debian.org/pool/updates/main/l/linux/linux-libc-dev_3.16.7-ckt11-1+deb8u6_amd64.deb  404  Not Found [IP: 195.20.242.89 80]
+
+E: Failed to fetch http://httpredir.debian.org/debian/pool/main/g/glibc/libc6-dev_2.19-18+deb8u1_amd64.deb  404  Not Found
+
+E: Failed to fetch http://security.debian.org/pool/updates/main/l/linux/linux-compiler-gcc-4.8-x86_3.16.7-ckt11-1+deb8u6_amd64.deb  404  Not Found [IP: 195.20.242.89 80]
+
+E: Failed to fetch http://security.debian.org/pool/updates/main/l/linux/linux-headers-3.16.0-4-common_3.16.7-ckt11-1+deb8u6_amd64.deb  404  Not Found [IP: 195.20.242.89 80]
+
+E: Failed to fetch http://httpredir.debian.org/debian/pool/main/l/linux-tools/linux-kbuild-3.16_3.16-3_amd64.deb  404  Not Found
+
+E: Failed to fetch http://security.debian.org/pool/updates/main/l/linux/linux-headers-3.16.0-4-amd64_3.16.7-ckt11-1+deb8u6_amd64.deb  404  Not Found [IP: 195.20.242.89 80]
+
+E: Unable to fetch some archives, maybe run apt-get update or try with --fix-missing?
+stdin: is not a tty
+Get:1 http://security.debian.org jessie/updates InRelease [63.1 kB]
+Ign http://httpredir.debian.org jessie InRelease
+Get:2 http://security.debian.org jessie/updates/main Sources [178 kB]
+Get:3 http://httpredir.debian.org jessie Release.gpg [2,373 B]
+Get:4 http://httpredir.debian.org jessie Release [148 kB]
+Get:5 http://security.debian.org jessie/updates/main amd64 Packages [342 kB]
+Get:6 http://httpredir.debian.org jessie/main Sources [7,056 kB]
+Get:7 http://security.debian.org jessie/updates/main Translation-en [181 kB]
+Get:8 http://httpredir.debian.org jessie/main amd64 Packages [6,776 kB]
+Get:9 http://httpredir.debian.org jessie/main Translation-en [4,582 kB]
+Fetched 19.3 MB in 23s (835 kB/s)
+Reading package lists...
+stdin: is not a tty
+Reading package lists...
+Building dependency tree...
+Reading state information...
+The following extra packages will be installed:
+  binutils cpp cpp-4.8 cpp-4.9 fakeroot gcc gcc-4.8 gcc-4.9 libasan0 libasan1
+  libatomic1 libc-dev-bin libc6 libc6-dev libcilkrts5 libcloog-isl4
+  libfakeroot libgcc-4.8-dev libgcc-4.9-dev libgomp1 libisl10 libitm1 liblsan0
+  libmpc3 libmpfr4 libquadmath0 libtsan0 libubsan0 linux-compiler-gcc-4.8-x86
+  linux-headers-3.16.0-4-common linux-headers-amd64 linux-kbuild-3.16
+  linux-libc-dev make manpages-dev
+Suggested packages:
+  binutils-doc cpp-doc gcc-4.8-locales gcc-4.9-locales gcc-multilib autoconf
+  automake libtool flex bison gdb gcc-doc gcc-4.8-multilib gcc-4.8-doc
+  libgcc1-dbg libgomp1-dbg libitm1-dbg libatomic1-dbg libasan0-dbg
+  libtsan0-dbg libquadmath0-dbg gcc-4.9-multilib gcc-4.9-doc libasan1-dbg
+  liblsan0-dbg libubsan0-dbg libcilkrts5-dbg glibc-doc make-doc
+Recommended packages:
+  linux-image
+The following NEW packages will be installed:
+  binutils cpp cpp-4.8 cpp-4.9 dkms fakeroot gcc gcc-4.8 gcc-4.9 libasan0
+  libasan1 libatomic1 libc-dev-bin libc6-dev libcilkrts5 libcloog-isl4
+  libfakeroot libgcc-4.8-dev libgcc-4.9-dev libgomp1 libisl10 libitm1 liblsan0
+  libmpc3 libmpfr4 libquadmath0 libtsan0 libubsan0 linux-compiler-gcc-4.8-x86
+  linux-headers-3.16.0-4-amd64 linux-headers-3.16.0-4-common
+  linux-headers-amd64 linux-kbuild-3.16 linux-libc-dev make manpages-dev
+The following packages will be upgraded:
+  libc6
+1 upgraded, 36 newly installed, 0 to remove and 129 not upgraded.
+Need to get 13.5 MB/45.0 MB of archives.
+After this operation, 153 MB of additional disk space will be used.
+Get:1 http://httpredir.debian.org/debian/ jessie/main libc6 amd64 2.19-18+deb8u7 [4,665 kB]
+Get:2 http://httpredir.debian.org/debian/ jessie/main libc-dev-bin amd64 2.19-18+deb8u7 [238 kB]
+Get:3 http://httpredir.debian.org/debian/ jessie/main linux-libc-dev amd64 3.16.39-1 [1,045 kB]
+Get:4 http://httpredir.debian.org/debian/ jessie/main libc6-dev amd64 2.19-18+deb8u7 [2,002 kB]
+Get:5 http://httpredir.debian.org/debian/ jessie/main linux-compiler-gcc-4.8-x86 amd64 3.16.39-1 [345 kB]
+Get:6 http://httpredir.debian.org/debian/ jessie/main linux-headers-3.16.0-4-common amd64 3.16.39-1 [4,541 kB]
+Get:7 http://httpredir.debian.org/debian/ jessie/main linux-kbuild-3.16 amd64 3.16.7-ckt20-1 [174 kB]
+Get:8 http://httpredir.debian.org/debian/ jessie/main linux-headers-3.16.0-4-amd64 amd64 3.16.39-1 [451 kB]
+Reading changelogs...
+dpkg-preconfigure: unable to re-open stdin: No such file or directory
+Fetched 13.5 MB in 15s (885 kB/s)
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 29800 files and directories currently installed.)
+Preparing to unpack .../libc6_2.19-18+deb8u7_amd64.deb ...
+Unpacking libc6:amd64 (2.19-18+deb8u7) over (2.19-18+deb8u1) ...
+Setting up libc6:amd64 (2.19-18+deb8u7) ...
+Processing triggers for libc-bin (2.19-18+deb8u1) ...
+Selecting previously unselected package libasan0:amd64.
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 29800 files and directories currently installed.)
+Preparing to unpack .../libasan0_4.8.4-1_amd64.deb ...
+Unpacking libasan0:amd64 (4.8.4-1) ...
+Selecting previously unselected package libasan1:amd64.
+Preparing to unpack .../libasan1_4.9.2-10_amd64.deb ...
+Unpacking libasan1:amd64 (4.9.2-10) ...
+Selecting previously unselected package libatomic1:amd64.
+Preparing to unpack .../libatomic1_4.9.2-10_amd64.deb ...
+Unpacking libatomic1:amd64 (4.9.2-10) ...
+Selecting previously unselected package libcilkrts5:amd64.
+Preparing to unpack .../libcilkrts5_4.9.2-10_amd64.deb ...
+Unpacking libcilkrts5:amd64 (4.9.2-10) ...
+Selecting previously unselected package libisl10:amd64.
+Preparing to unpack .../libisl10_0.12.2-2_amd64.deb ...
+Unpacking libisl10:amd64 (0.12.2-2) ...
+Selecting previously unselected package libcloog-isl4:amd64.
+Preparing to unpack .../libcloog-isl4_0.18.2-1+b2_amd64.deb ...
+Unpacking libcloog-isl4:amd64 (0.18.2-1+b2) ...
+Selecting previously unselected package libgomp1:amd64.
+Preparing to unpack .../libgomp1_4.9.2-10_amd64.deb ...
+Unpacking libgomp1:amd64 (4.9.2-10) ...
+Selecting previously unselected package libitm1:amd64.
+Preparing to unpack .../libitm1_4.9.2-10_amd64.deb ...
+Unpacking libitm1:amd64 (4.9.2-10) ...
+Selecting previously unselected package liblsan0:amd64.
+Preparing to unpack .../liblsan0_4.9.2-10_amd64.deb ...
+Unpacking liblsan0:amd64 (4.9.2-10) ...

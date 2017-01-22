@@ -121,7 +121,7 @@ Les codes d'Accès/Vérification sont les mêmes utilisés dans les tests automa
 
 Remarque : Si vous utilisez un fournisseur de cloud (Rackspace, AWS) le moyen le plus facile de connaitre l'adresse IP est de rechercher votre adresse DNS dans le portail de gestion de votre fournisseur de cloud.
 
-Vous pouvez également accéder à la machine virtuelle en utilisant un autre programme SSH (ex: PuTTY), il suffit d'indiquer l'adresse comme décrit dans la note ci-dessus et utiliser le port correct 22 pour les installations de cloud et 2222 pour une installation VirtualBox locale.
+Vous pouvez également accéder à la machine virtuelle en utilisant un autre programme SSH (par exemple : PuTTY), il suffit d'indiquer l'adresse comme décrit dans la note ci-dessus et utiliser le port correct 22 pour les installations de cloud et 2222 pour une installation VirtualBox locale.
 
 ## 9. Comptes utilisateur Yexpert
 
@@ -139,7 +139,7 @@ Partition DMO :
 
 Il y a deux comptes utilisateurs qui sont créés automatiquement lors du processus d'installation qui rendent l'accès à **Yexpert** plus facile :
 
-Remarque : par défaut ${instance} est Yrelay.
+Remarque : par défaut ${instance} est **yrelay**.
 
 Compte utilisateur :
 
@@ -215,33 +215,33 @@ Mot de passe :
 
 Ports :
 
-* EWD.js : 8080 (https)
-* EWDRest : 8000 (https)
-* EWDYexpertTerm : 8081 (https)
+* yexpert-js   : 8080 (https)
+* yexpert-term : 8081 (https)
+* yexpert-rpc  : 8082 (https)
 
 Services :
 
-* EWD.js : ${instance}yexpert-ewdjs
-* Et les contrôles EWD.js, EWDRest et EWDYexpertTerm
+* ${instance}yexpert : gestion des processus M
+* ${instance}yexpert-js : contrôles yexpert-js, yexpert-term et yexpert-rpc
 
-Pour contrôler le type de service de EWD :
+Pour contrôler le type de service :
 
-	~$ sudo service ${instance}yexpert-ewdjs {start,stop,restart}
+	~$ sudo service ${instance}yexpert-js {start,stop,restart}
 
 Lorsque ${instance} est le nom de l'instance et {start,stop,restart} est la fonction que vous souhaitez effectuer.
 
-Les fichiers log pour EWD.js and EWDRest sont localisés dans **/home/$instance/log/** :
+Les fichiers log pour ${instance}yexpert et ${instance}yexpert-js sont localisés dans **/home/$instance/log/** :
 
-* ewdjs.log
-* ewdjsErr.log
-* ewdRestOut.log
-* ewdRestErr.log
-* ewdYexpertTermOut.log
-* ewdYexpertTermErr.log
-* node-inspectorOut.log
-* node-inspectorErr.log
+* recupererJournal.log
+* reduireJournal.log
+* ewd-xpress-gtmErr.log
+* ewd-xpress-gtmOut.log
+* yexpert-termErr.log
+* yexpert-termOut.log
+* yexpertrpcOut.log
+* yexpertrpcErr.log
 
-Pour accéder à l'administration du serveur EWD.js tapez dans l'URL de votre navigateur le lien suivant : **https://localhost:8080/ewd/ewdMonitor/index.html**
+Pour accéder à l'administration du serveur EWD.js tapez dans l'URL de votre navigateur le lien suivant : **https://localhost:8080/yexpert/index.html**
 
 ## 13. Détails techniques
 
@@ -261,32 +261,6 @@ Pour plus d'informations sur Vagrantfiles lire la documentation Vagrant situé �
 Ceci est le script qui est utilisé par le shell. Ce script installe automatiquement Yexpert sur une machine. Ceci est un installateur non-interactive (automatisé) qui assurera si les prérequis sont remplies (CMake, git, etc.), l'installation de GT.M, créer une instance d'Yexpert, exécute les scripts qui vont importer toutes les routines et globales d'Yexpert pour l'instance Yrelay et exécute une série de tests. Durant l'installation une base de donnée de démonstration **DMO** sera installée. 
 
 **installerAuto.sh** exécute quelques commandes et lance dans un certain ordre des scripts se trouvant dans les répertoires.
-
-### 13.3. Débugger une application Node.js avec Node-Inspector
- 
-Node Inspector est un debugger Node par navigateur qui s’appuie sur WebKit. Il fonctionne sur tous les navigateurs compatible WebKit (Chrome, Chromium, Safari, etc). L’installation se fait par nmp avec la commande suivante :
-
-Le debug de l’application se fait en 3 étapes :
-
-1. Installer EWD.js
-
-2. Installer Node-Inspector :
-  * cd ~/ewdjs
-  * npm install -g node-inspector
-
-3. Démarrer Node-Inspector
-  * cd ~/ewdjs
-  * node-inspector --web-port 8081
-
-4. Démarrer EWD.js
-
-5. En utilisant Chrome, mettre en place la connexion ewdMonitor (https://127.0.0.1:8080/ewd/ewdMonitor/index.html). Dans la vue d'ensemble du panneau principal, vous verrez un bouton dans la section **Child Process Pool**. Ce bouton va commencer un nouveau processus enfant en mode debug. Cliquer dessus et puis fermer les autres processus enfant de sorte que le seul process activé soit votre nouveau debug. Cela garantit que toutes les activités seront assurées par ce processus
-
-6. Cliquer sur le bouton bleu de débogage pour le processus enfant. Un nouvel onglet de l'explorateur s'ouvrira et l'interface de Node-Inspector apparaîtra. Vous pouvez maintenant ajouter des points d'arrêt et examiner vos modules!
-
-7. Lorsque vous avez terminé, démarrer de nouveaux processus enfant (pas en mode debug) et fermer celle que vous avez activé en mode debug. CTRL & C pour arrêter le processus Node-Inspector dans sa fenêtre de terminal
-
-8. Si vous voulez changer la web-port utilisé pour Node-Inspector, cliquer sur l'onglet **Internals** dans ewdMonitor, puis sur l'onglet **Debegging Ports**.
 
 ## 14. Quelques erreurs connues
 

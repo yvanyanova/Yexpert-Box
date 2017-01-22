@@ -31,13 +31,13 @@ Vagrant.configure("2") do |config|
   # Dans l'exemple ci-dessous, ceux accédant à "localhost: 8080" accéderont
   # au port 80 sur la machine hôte.config.vm.network :
   # forwarded_port, guest: 8080, host: 80 # Exemple
-  config.vm.network :forwarded_port, guest: 3000, host: 3000 # Libre pour test
-  config.vm.network :forwarded_port, guest: 8000, host: 8000 # EWDRest
-  config.vm.network :forwarded_port, guest: 8080, host: 8080 # EWD.js
-  config.vm.network :forwarded_port, guest: 8081, host: 8081 # EWDYexpertTerm
-  config.vm.network :forwarded_port, guest: 8082, host: 8082 # Libre pour test
+  ##config.vm.network :forwarded_port, guest: 3000, host: 3000 # Libre pour test
+  ##config.vm.network :forwarded_port, guest: 8000, host: 8000 # EWDRest
+  config.vm.network :forwarded_port, guest: 8080, host: 8080 # yexpert-js
+  config.vm.network :forwarded_port, guest: 8081, host: 8081 # yexpert-term
+  config.vm.network :forwarded_port, guest: 8082, host: 8082 # yexpert-rpc
   config.vm.network :forwarded_port, guest: 8083, host: 8083 # Libre pour test
-  config.vm.network :forwarded_port, guest: 8089, host: 8089 # Node Inspector
+  ##config.vm.network :forwarded_port, guest: 8089, host: 8089 # Node Inspector
 
   # Créer un réseau privé, qui permet l'accès de l'hôte uniquement à la machine
   # en utilisant une adresse IP spécifique.
