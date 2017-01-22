@@ -1,479 +1,0 @@
-Bringing machine 'Box Yexpert Debian' up with 'virtualbox' provider...
-==> Box Yexpert Debian: Importing base box 'debian/jessie64'...
-[KProgress: 10%[KProgress: 20%[KProgress: 30%[KProgress: 40%[KProgress: 60%[KProgress: 80%[KProgress: 90%[K==> Box Yexpert Debian: Matching MAC address for NAT networking...
-==> Box Yexpert Debian: Checking if box 'debian/jessie64' is up to date...
-==> Box Yexpert Debian: A newer version of the box 'debian/jessie64' is available! You currently
-==> Box Yexpert Debian: have version '8.2.2'. The latest is version '8.7.0'. Run
-==> Box Yexpert Debian: `vagrant box update` to update.
-==> Box Yexpert Debian: Setting the name of the VM: debian_BoxYexpertDebian_1485078887295_42622
-==> Box Yexpert Debian: Clearing any previously set network interfaces...
-==> Box Yexpert Debian: Preparing network interfaces based on configuration...
-    Box Yexpert Debian: Adapter 1: nat
-==> Box Yexpert Debian: Forwarding ports...
-    Box Yexpert Debian: 8080 => 8080 (adapter 1)
-    Box Yexpert Debian: 8081 => 8081 (adapter 1)
-    Box Yexpert Debian: 8082 => 8082 (adapter 1)
-    Box Yexpert Debian: 8083 => 8083 (adapter 1)
-    Box Yexpert Debian: 22 => 2222 (adapter 1)
-==> Box Yexpert Debian: Booting VM...
-==> Box Yexpert Debian: Waiting for machine to boot. This may take a few minutes...
-    Box Yexpert Debian: SSH address: 127.0.0.1:2222
-    Box Yexpert Debian: SSH username: vagrant
-    Box Yexpert Debian: SSH auth method: private key
-    Box Yexpert Debian: Warning: Connection reset. Retrying...
-    Box Yexpert Debian: Warning: Remote connection disconnect. Retrying...
-    Box Yexpert Debian: Warning: Connection reset. Retrying...
-    Box Yexpert Debian: Warning: Remote connection disconnect. Retrying...
-    Box Yexpert Debian: Warning: Connection reset. Retrying...
-    Box Yexpert Debian: Warning: Remote connection disconnect. Retrying...
-==> Box Yexpert Debian: Machine booted and ready!
-[Box Yexpert Debian] No installation found.
-stdin: is not a tty
-Reading package lists...
-Building dependency tree...
-Reading state information...
-The following extra packages will be installed:
-  binutils cpp cpp-4.8 cpp-4.9 fakeroot gcc gcc-4.8 gcc-4.9 libasan0 libasan1
-  libatomic1 libc-dev-bin libc6-dev libcilkrts5 libcloog-isl4 libfakeroot
-  libgcc-4.8-dev libgcc-4.9-dev libgomp1 libisl10 libitm1 liblsan0 libmpc3
-  libmpfr4 libquadmath0 libtsan0 libubsan0 linux-compiler-gcc-4.8-x86
-  linux-headers-3.16.0-4-common linux-headers-amd64 linux-kbuild-3.16
-  linux-libc-dev make manpages-dev
-Suggested packages:
-  binutils-doc cpp-doc gcc-4.8-locales gcc-4.9-locales gcc-multilib autoconf
-  automake libtool flex bison gdb gcc-doc gcc-4.8-multilib gcc-4.8-doc
-  libgcc1-dbg libgomp1-dbg libitm1-dbg libatomic1-dbg libasan0-dbg
-  libtsan0-dbg libquadmath0-dbg gcc-4.9-multilib gcc-4.9-doc libasan1-dbg
-  liblsan0-dbg libubsan0-dbg libcilkrts5-dbg glibc-doc make-doc
-Recommended packages:
-  linux-image
-The following NEW packages will be installed:
-  binutils cpp cpp-4.8 cpp-4.9 dkms fakeroot gcc gcc-4.8 gcc-4.9 libasan0
-  libasan1 libatomic1 libc-dev-bin libc6-dev libcilkrts5 libcloog-isl4
-  libfakeroot libgcc-4.8-dev libgcc-4.9-dev libgomp1 libisl10 libitm1 liblsan0
-  libmpc3 libmpfr4 libquadmath0 libtsan0 libubsan0 linux-compiler-gcc-4.8-x86
-  linux-headers-3.16.0-4-amd64 linux-headers-3.16.0-4-common
-  linux-headers-amd64 linux-kbuild-3.16 linux-libc-dev make manpages-dev
-0 upgraded, 36 newly installed, 0 to remove and 0 not upgraded.
-Need to get 40.2 MB of archives.
-After this operation, 153 MB of additional disk space will be used.
-Err http://security.debian.org/ jessie/updates/main linux-libc-dev amd64 3.16.7-ckt11-1+deb8u6
-  404  Not Found [IP: 195.20.242.89 80]
-Err http://security.debian.org/ jessie/updates/main linux-compiler-gcc-4.8-x86 amd64 3.16.7-ckt11-1+deb8u6
-  404  Not Found [IP: 195.20.242.89 80]
-Err http://security.debian.org/ jessie/updates/main linux-headers-3.16.0-4-common amd64 3.16.7-ckt11-1+deb8u6
-  404  Not Found [IP: 195.20.242.89 80]
-Err http://security.debian.org/ jessie/updates/main linux-headers-3.16.0-4-amd64 amd64 3.16.7-ckt11-1+deb8u6
-  404  Not Found [IP: 195.20.242.89 80]
-Get:1 http://httpredir.debian.org/debian/ jessie/main libasan0 amd64 4.8.4-1 [63.3 kB]
-Get:2 http://httpredir.debian.org/debian/ jessie/main libasan1 amd64 4.9.2-10 [195 kB]
-Get:3 http://httpredir.debian.org/debian/ jessie/main libatomic1 amd64 4.9.2-10 [8,992 B]
-Get:4 http://httpredir.debian.org/debian/ jessie/main libcilkrts5 amd64 4.9.2-10 [40.1 kB]
-Get:5 http://httpredir.debian.org/debian/ jessie/main libisl10 amd64 0.12.2-2 [440 kB]
-Get:6 http://httpredir.debian.org/debian/ jessie/main libcloog-isl4 amd64 0.18.2-1+b2 [61.8 kB]
-Get:7 http://httpredir.debian.org/debian/ jessie/main libgomp1 amd64 4.9.2-10 [37.8 kB]
-Get:8 http://httpredir.debian.org/debian/ jessie/main libitm1 amd64 4.9.2-10 [29.2 kB]
-Get:9 http://httpredir.debian.org/debian/ jessie/main liblsan0 amd64 4.9.2-10 [92.8 kB]
-Get:10 http://httpredir.debian.org/debian/ jessie/main libmpfr4 amd64 3.1.2-2 [527 kB]
-Get:11 http://httpredir.debian.org/debian/ jessie/main libquadmath0 amd64 4.9.2-10 [129 kB]
-Get:12 http://httpredir.debian.org/debian/ jessie/main libtsan0 amd64 4.9.2-10 [212 kB]
-Get:13 http://httpredir.debian.org/debian/ jessie/main libubsan0 amd64 4.9.2-10 [82.4 kB]
-Get:14 http://httpredir.debian.org/debian/ jessie/main libmpc3 amd64 1.0.2-1 [39.3 kB]
-Get:15 http://httpredir.debian.org/debian/ jessie/main binutils amd64 2.25-5 [3,516 kB]
-Get:16 http://httpredir.debian.org/debian/ jessie/main cpp-4.9 amd64 4.9.2-10 [5,169 kB]
-Get:17 http://httpredir.debian.org/debian/ jessie/main cpp amd64 4:4.9.2-2 [17.3 kB]
-Get:18 http://httpredir.debian.org/debian/ jessie/main cpp-4.8 amd64 4.8.4-1 [4,577 kB]
-Get:19 http://httpredir.debian.org/debian/ jessie/main libgcc-4.9-dev amd64 4.9.2-10 [2,066 kB]
-Get:20 http://httpredir.debian.org/debian/ jessie/main gcc-4.9 amd64 4.9.2-10 [5,352 kB]
-Get:21 http://httpredir.debian.org/debian/ jessie/main gcc amd64 4:4.9.2-2 [5,136 B]
-Get:22 http://httpredir.debian.org/debian/ jessie/main make amd64 4.0-8.1 [349 kB]
-Get:23 http://httpredir.debian.org/debian/ jessie/main dkms all 2.2.0.3-2 [70.9 kB]
-Get:24 http://httpredir.debian.org/debian/ jessie/main libfakeroot amd64 1.20.2-1 [44.7 kB]
-Get:25 http://httpredir.debian.org/debian/ jessie/main fakeroot amd64 1.20.2-1 [84.7 kB]
-Get:26 http://httpredir.debian.org/debian/ jessie/main libgcc-4.8-dev amd64 4.8.4-1 [1,689 kB]
-Get:27 http://httpredir.debian.org/debian/ jessie/main gcc-4.8 amd64 4.8.4-1 [4,787 kB]
-Err http://httpredir.debian.org/debian/ jessie/main libc-dev-bin amd64 2.19-18+deb8u1
-  404  Not Found
-Err http://httpredir.debian.org/debian/ jessie/main libc6-dev amd64 2.19-18+deb8u1
-  404  Not Found
-Err http://httpredir.debian.org/debian/ jessie/main linux-kbuild-3.16 amd64 3.16-3
-  404  Not Found
-Get:28 http://httpredir.debian.org/debian/ jessie/main linux-headers-amd64 amd64 3.16+63 [5,050 B]
-Get:29 http://httpredir.debian.org/debian/ jessie/main manpages-dev all 3.74-1 [1,865 kB]
-Fetched 31.6 MB in 37s (837 kB/s)
-E: Failed to fetch http://httpredir.debian.org/debian/pool/main/g/glibc/libc-dev-bin_2.19-18+deb8u1_amd64.deb  404  Not Found
-
-E: Failed to fetch http://security.debian.org/pool/updates/main/l/linux/linux-libc-dev_3.16.7-ckt11-1+deb8u6_amd64.deb  404  Not Found [IP: 195.20.242.89 80]
-
-E: Failed to fetch http://httpredir.debian.org/debian/pool/main/g/glibc/libc6-dev_2.19-18+deb8u1_amd64.deb  404  Not Found
-
-E: Failed to fetch http://security.debian.org/pool/updates/main/l/linux/linux-compiler-gcc-4.8-x86_3.16.7-ckt11-1+deb8u6_amd64.deb  404  Not Found [IP: 195.20.242.89 80]
-
-E: Failed to fetch http://security.debian.org/pool/updates/main/l/linux/linux-headers-3.16.0-4-common_3.16.7-ckt11-1+deb8u6_amd64.deb  404  Not Found [IP: 195.20.242.89 80]
-
-E: Failed to fetch http://httpredir.debian.org/debian/pool/main/l/linux-tools/linux-kbuild-3.16_3.16-3_amd64.deb  404  Not Found
-
-E: Failed to fetch http://security.debian.org/pool/updates/main/l/linux/linux-headers-3.16.0-4-amd64_3.16.7-ckt11-1+deb8u6_amd64.deb  404  Not Found [IP: 195.20.242.89 80]
-
-E: Unable to fetch some archives, maybe run apt-get update or try with --fix-missing?
-stdin: is not a tty
-Get:1 http://security.debian.org jessie/updates InRelease [63.1 kB]
-Ign http://httpredir.debian.org jessie InRelease
-Get:2 http://security.debian.org jessie/updates/main Sources [178 kB]
-Get:3 http://httpredir.debian.org jessie Release.gpg [2,373 B]
-Get:4 http://httpredir.debian.org jessie Release [148 kB]
-Get:5 http://security.debian.org jessie/updates/main amd64 Packages [342 kB]
-Get:6 http://httpredir.debian.org jessie/main Sources [7,056 kB]
-Get:7 http://security.debian.org jessie/updates/main Translation-en [181 kB]
-Get:8 http://httpredir.debian.org jessie/main amd64 Packages [6,776 kB]
-Get:9 http://httpredir.debian.org jessie/main Translation-en [4,582 kB]
-Fetched 19.3 MB in 23s (835 kB/s)
-Reading package lists...
-stdin: is not a tty
-Reading package lists...
-Building dependency tree...
-Reading state information...
-The following extra packages will be installed:
-  binutils cpp cpp-4.8 cpp-4.9 fakeroot gcc gcc-4.8 gcc-4.9 libasan0 libasan1
-  libatomic1 libc-dev-bin libc6 libc6-dev libcilkrts5 libcloog-isl4
-  libfakeroot libgcc-4.8-dev libgcc-4.9-dev libgomp1 libisl10 libitm1 liblsan0
-  libmpc3 libmpfr4 libquadmath0 libtsan0 libubsan0 linux-compiler-gcc-4.8-x86
-  linux-headers-3.16.0-4-common linux-headers-amd64 linux-kbuild-3.16
-  linux-libc-dev make manpages-dev
-Suggested packages:
-  binutils-doc cpp-doc gcc-4.8-locales gcc-4.9-locales gcc-multilib autoconf
-  automake libtool flex bison gdb gcc-doc gcc-4.8-multilib gcc-4.8-doc
-  libgcc1-dbg libgomp1-dbg libitm1-dbg libatomic1-dbg libasan0-dbg
-  libtsan0-dbg libquadmath0-dbg gcc-4.9-multilib gcc-4.9-doc libasan1-dbg
-  liblsan0-dbg libubsan0-dbg libcilkrts5-dbg glibc-doc make-doc
-Recommended packages:
-  linux-image
-The following NEW packages will be installed:
-  binutils cpp cpp-4.8 cpp-4.9 dkms fakeroot gcc gcc-4.8 gcc-4.9 libasan0
-  libasan1 libatomic1 libc-dev-bin libc6-dev libcilkrts5 libcloog-isl4
-  libfakeroot libgcc-4.8-dev libgcc-4.9-dev libgomp1 libisl10 libitm1 liblsan0
-  libmpc3 libmpfr4 libquadmath0 libtsan0 libubsan0 linux-compiler-gcc-4.8-x86
-  linux-headers-3.16.0-4-amd64 linux-headers-3.16.0-4-common
-  linux-headers-amd64 linux-kbuild-3.16 linux-libc-dev make manpages-dev
-The following packages will be upgraded:
-  libc6
-1 upgraded, 36 newly installed, 0 to remove and 129 not upgraded.
-Need to get 13.5 MB/45.0 MB of archives.
-After this operation, 153 MB of additional disk space will be used.
-Get:1 http://httpredir.debian.org/debian/ jessie/main libc6 amd64 2.19-18+deb8u7 [4,665 kB]
-Get:2 http://httpredir.debian.org/debian/ jessie/main libc-dev-bin amd64 2.19-18+deb8u7 [238 kB]
-Get:3 http://httpredir.debian.org/debian/ jessie/main linux-libc-dev amd64 3.16.39-1 [1,045 kB]
-Get:4 http://httpredir.debian.org/debian/ jessie/main libc6-dev amd64 2.19-18+deb8u7 [2,002 kB]
-Get:5 http://httpredir.debian.org/debian/ jessie/main linux-compiler-gcc-4.8-x86 amd64 3.16.39-1 [345 kB]
-Get:6 http://httpredir.debian.org/debian/ jessie/main linux-headers-3.16.0-4-common amd64 3.16.39-1 [4,541 kB]
-Get:7 http://httpredir.debian.org/debian/ jessie/main linux-kbuild-3.16 amd64 3.16.7-ckt20-1 [174 kB]
-Get:8 http://httpredir.debian.org/debian/ jessie/main linux-headers-3.16.0-4-amd64 amd64 3.16.39-1 [451 kB]
-Reading changelogs...
-dpkg-preconfigure: unable to re-open stdin: No such file or directory
-Fetched 13.5 MB in 15s (885 kB/s)
-(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 29800 files and directories currently installed.)
-Preparing to unpack .../libc6_2.19-18+deb8u7_amd64.deb ...
-Unpacking libc6:amd64 (2.19-18+deb8u7) over (2.19-18+deb8u1) ...
-Setting up libc6:amd64 (2.19-18+deb8u7) ...
-Processing triggers for libc-bin (2.19-18+deb8u1) ...
-Selecting previously unselected package libasan0:amd64.
-(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 29800 files and directories currently installed.)
-Preparing to unpack .../libasan0_4.8.4-1_amd64.deb ...
-Unpacking libasan0:amd64 (4.8.4-1) ...
-Selecting previously unselected package libasan1:amd64.
-Preparing to unpack .../libasan1_4.9.2-10_amd64.deb ...
-Unpacking libasan1:amd64 (4.9.2-10) ...
-Selecting previously unselected package libatomic1:amd64.
-Preparing to unpack .../libatomic1_4.9.2-10_amd64.deb ...
-Unpacking libatomic1:amd64 (4.9.2-10) ...
-Selecting previously unselected package libcilkrts5:amd64.
-Preparing to unpack .../libcilkrts5_4.9.2-10_amd64.deb ...
-Unpacking libcilkrts5:amd64 (4.9.2-10) ...
-Selecting previously unselected package libisl10:amd64.
-Preparing to unpack .../libisl10_0.12.2-2_amd64.deb ...
-Unpacking libisl10:amd64 (0.12.2-2) ...
-Selecting previously unselected package libcloog-isl4:amd64.
-Preparing to unpack .../libcloog-isl4_0.18.2-1+b2_amd64.deb ...
-Unpacking libcloog-isl4:amd64 (0.18.2-1+b2) ...
-Selecting previously unselected package libgomp1:amd64.
-Preparing to unpack .../libgomp1_4.9.2-10_amd64.deb ...
-Unpacking libgomp1:amd64 (4.9.2-10) ...
-Selecting previously unselected package libitm1:amd64.
-Preparing to unpack .../libitm1_4.9.2-10_amd64.deb ...
-Unpacking libitm1:amd64 (4.9.2-10) ...
-Selecting previously unselected package liblsan0:amd64.
-Preparing to unpack .../liblsan0_4.9.2-10_amd64.deb ...
-Unpacking liblsan0:amd64 (4.9.2-10) ...
-Selecting previously unselected package libmpfr4:amd64.
-Preparing to unpack .../libmpfr4_3.1.2-2_amd64.deb ...
-Unpacking libmpfr4:amd64 (3.1.2-2) ...
-Selecting previously unselected package libquadmath0:amd64.
-Preparing to unpack .../libquadmath0_4.9.2-10_amd64.deb ...
-Unpacking libquadmath0:amd64 (4.9.2-10) ...
-Selecting previously unselected package libtsan0:amd64.
-Preparing to unpack .../libtsan0_4.9.2-10_amd64.deb ...
-Unpacking libtsan0:amd64 (4.9.2-10) ...
-Selecting previously unselected package libubsan0:amd64.
-Preparing to unpack .../libubsan0_4.9.2-10_amd64.deb ...
-Unpacking libubsan0:amd64 (4.9.2-10) ...
-Selecting previously unselected package libmpc3:amd64.
-Preparing to unpack .../libmpc3_1.0.2-1_amd64.deb ...
-Unpacking libmpc3:amd64 (1.0.2-1) ...
-Selecting previously unselected package binutils.
-Preparing to unpack .../binutils_2.25-5_amd64.deb ...
-Unpacking binutils (2.25-5) ...
-Selecting previously unselected package cpp-4.9.
-Preparing to unpack .../cpp-4.9_4.9.2-10_amd64.deb ...
-Unpacking cpp-4.9 (4.9.2-10) ...
-Selecting previously unselected package cpp.
-Preparing to unpack .../cpp_4%3a4.9.2-2_amd64.deb ...
-Unpacking cpp (4:4.9.2-2) ...
-Selecting previously unselected package cpp-4.8.
-Preparing to unpack .../cpp-4.8_4.8.4-1_amd64.deb ...
-Unpacking cpp-4.8 (4.8.4-1) ...
-Selecting previously unselected package libgcc-4.9-dev:amd64.
-Preparing to unpack .../libgcc-4.9-dev_4.9.2-10_amd64.deb ...
-Unpacking libgcc-4.9-dev:amd64 (4.9.2-10) ...
-Selecting previously unselected package gcc-4.9.
-Preparing to unpack .../gcc-4.9_4.9.2-10_amd64.deb ...
-Unpacking gcc-4.9 (4.9.2-10) ...
-Selecting previously unselected package gcc.
-Preparing to unpack .../gcc_4%3a4.9.2-2_amd64.deb ...
-Unpacking gcc (4:4.9.2-2) ...
-Selecting previously unselected package make.
-Preparing to unpack .../make_4.0-8.1_amd64.deb ...
-Unpacking make (4.0-8.1) ...
-Selecting previously unselected package dkms.
-Preparing to unpack .../dkms_2.2.0.3-2_all.deb ...
-Unpacking dkms (2.2.0.3-2) ...
-Selecting previously unselected package libfakeroot:amd64.
-Preparing to unpack .../libfakeroot_1.20.2-1_amd64.deb ...
-Unpacking libfakeroot:amd64 (1.20.2-1) ...
-Selecting previously unselected package fakeroot.
-Preparing to unpack .../fakeroot_1.20.2-1_amd64.deb ...
-Unpacking fakeroot (1.20.2-1) ...
-Selecting previously unselected package libgcc-4.8-dev:amd64.
-Preparing to unpack .../libgcc-4.8-dev_4.8.4-1_amd64.deb ...
-Unpacking libgcc-4.8-dev:amd64 (4.8.4-1) ...
-Selecting previously unselected package gcc-4.8.
-Preparing to unpack .../gcc-4.8_4.8.4-1_amd64.deb ...
-Unpacking gcc-4.8 (4.8.4-1) ...
-Selecting previously unselected package libc-dev-bin.
-Preparing to unpack .../libc-dev-bin_2.19-18+deb8u7_amd64.deb ...
-Unpacking libc-dev-bin (2.19-18+deb8u7) ...
-Selecting previously unselected package linux-libc-dev:amd64.
-Preparing to unpack .../linux-libc-dev_3.16.39-1_amd64.deb ...
-Unpacking linux-libc-dev:amd64 (3.16.39-1) ...
-Selecting previously unselected package libc6-dev:amd64.
-Preparing to unpack .../libc6-dev_2.19-18+deb8u7_amd64.deb ...
-Unpacking libc6-dev:amd64 (2.19-18+deb8u7) ...
-Selecting previously unselected package linux-compiler-gcc-4.8-x86.
-Preparing to unpack .../linux-compiler-gcc-4.8-x86_3.16.39-1_amd64.deb ...
-Unpacking linux-compiler-gcc-4.8-x86 (3.16.39-1) ...
-Selecting previously unselected package linux-headers-3.16.0-4-common.
-Preparing to unpack .../linux-headers-3.16.0-4-common_3.16.39-1_amd64.deb ...
-Unpacking linux-headers-3.16.0-4-common (3.16.39-1) ...
-Selecting previously unselected package linux-kbuild-3.16.
-Preparing to unpack .../linux-kbuild-3.16_3.16.7-ckt20-1_amd64.deb ...
-Unpacking linux-kbuild-3.16 (3.16.7-ckt20-1) ...
-Selecting previously unselected package linux-headers-3.16.0-4-amd64.
-Preparing to unpack .../linux-headers-3.16.0-4-amd64_3.16.39-1_amd64.deb ...
-Unpacking linux-headers-3.16.0-4-amd64 (3.16.39-1) ...
-Selecting previously unselected package linux-headers-amd64.
-Preparing to unpack .../linux-headers-amd64_3.16+63_amd64.deb ...
-Unpacking linux-headers-amd64 (3.16+63) ...
-Selecting previously unselected package manpages-dev.
-Preparing to unpack .../manpages-dev_3.74-1_all.deb ...
-Unpacking manpages-dev (3.74-1) ...
-Processing triggers for man-db (2.7.0.2-5) ...
-Setting up libasan0:amd64 (4.8.4-1) ...
-Setting up libasan1:amd64 (4.9.2-10) ...
-Setting up libatomic1:amd64 (4.9.2-10) ...
-Setting up libcilkrts5:amd64 (4.9.2-10) ...
-Setting up libisl10:amd64 (0.12.2-2) ...
-Setting up libcloog-isl4:amd64 (0.18.2-1+b2) ...
-Setting up libgomp1:amd64 (4.9.2-10) ...
-Setting up libitm1:amd64 (4.9.2-10) ...
-Setting up liblsan0:amd64 (4.9.2-10) ...
-Setting up libmpfr4:amd64 (3.1.2-2) ...
-Setting up libquadmath0:amd64 (4.9.2-10) ...
-Setting up libtsan0:amd64 (4.9.2-10) ...
-Setting up libubsan0:amd64 (4.9.2-10) ...
-Setting up libmpc3:amd64 (1.0.2-1) ...
-Setting up binutils (2.25-5) ...
-Setting up cpp-4.9 (4.9.2-10) ...
-Setting up cpp (4:4.9.2-2) ...
-Setting up cpp-4.8 (4.8.4-1) ...
-Setting up libgcc-4.9-dev:amd64 (4.9.2-10) ...
-Setting up gcc-4.9 (4.9.2-10) ...
-Setting up gcc (4:4.9.2-2) ...
-Setting up make (4.0-8.1) ...
-Setting up dkms (2.2.0.3-2) ...
-Setting up libfakeroot:amd64 (1.20.2-1) ...
-Setting up fakeroot (1.20.2-1) ...
-update-alternatives: using /usr/bin/fakeroot-sysv to provide /usr/bin/fakeroot (fakeroot) in auto mode
-Setting up libgcc-4.8-dev:amd64 (4.8.4-1) ...
-Setting up gcc-4.8 (4.8.4-1) ...
-Setting up libc-dev-bin (2.19-18+deb8u7) ...
-Setting up linux-libc-dev:amd64 (3.16.39-1) ...
-Setting up libc6-dev:amd64 (2.19-18+deb8u7) ...
-Setting up linux-compiler-gcc-4.8-x86 (3.16.39-1) ...
-Setting up linux-headers-3.16.0-4-common (3.16.39-1) ...
-Setting up linux-kbuild-3.16 (3.16.7-ckt20-1) ...
-Setting up linux-headers-3.16.0-4-amd64 (3.16.39-1) ...
-Examining /etc/kernel/header_postinst.d.
-run-parts: executing /etc/kernel/header_postinst.d/dkms 3.16.0-4-amd64
-Setting up linux-headers-amd64 (3.16+63) ...
-Setting up manpages-dev (3.74-1) ...
-Processing triggers for libc-bin (2.19-18+deb8u1) ...
-Downloading VirtualBox Guest Additions ISO from http://download.virtualbox.org/virtualbox/4.3.36/VBoxGuestAdditions_4.3.36.iso
-[KProgress: 0% (Rate: 0/s, Estimated time remaining: --:--:--)[KProgress: 0% (Rate: 0/s, Estimated time remaining: --:--:--)[KProgress: 1% (Rate: 628k/s, Estimated time remaining: 0:01:29)[KProgress: 3% (Rate: 755k/s, Estimated time remaining: 0:01:13)[KProgress: 4% (Rate: 807k/s, Estimated time remaining: 0:01:07)[KProgress: 6% (Rate: 836k/s, Estimated time remaining: 0:01:04)[KProgress: 8% (Rate: 933k/s, Estimated time remaining: 0:01:01)[KProgress: 9% (Rate: 933k/s, Estimated time remaining: 0:00:59)[KProgress: 11% (Rate: 932k/s, Estimated time remaining: 0:00:58)[KProgress: 12% (Rate: 932k/s, Estimated time remaining: 0:00:56)[KProgress: 14% (Rate: 933k/s, Estimated time remaining: 0:00:55)[KProgress: 16% (Rate: 924k/s, Estimated time remaining: 0:00:54)[KProgress: 17% (Rate: 933k/s, Estimated time remaining: 0:00:52)[KProgress: 19% (Rate: 932k/s, Estimated time remaining: 0:00:51)[KProgress: 21% (Rate: 932k/s, Estimated time remaining: 0:00:50)[KProgress: 22% (Rate: 932k/s, Estimated time remaining: 0:00:49)[KProgress: 24% (Rate: 941k/s, Estimated time remaining: 0:00:47)[KProgress: 26% (Rate: 932k/s, Estimated time remaining: 0:00:46)[KProgress: 27% (Rate: 932k/s, Estimated time remaining: 0:00:45)[KProgress: 29% (Rate: 933k/s, Estimated time remaining: 0:00:44)[KProgress: 30% (Rate: 932k/s, Estimated time remaining: 0:00:43)[KProgress: 32% (Rate: 925k/s, Estimated time remaining: 0:00:42)[KProgress: 34% (Rate: 933k/s, Estimated time remaining: 0:00:41)[KProgress: 35% (Rate: 924k/s, Estimated time remaining: 0:00:40)[KProgress: 37% (Rate: 933k/s, Estimated time remaining: 0:00:39)[KProgress: 39% (Rate: 933k/s, Estimated time remaining: 0:00:38)[KProgress: 40% (Rate: 941k/s, Estimated time remaining: 0:00:37)[KProgress: 42% (Rate: 925k/s, Estimated time remaining: 0:00:36)[KProgress: 44% (Rate: 941k/s, Estimated time remaining: 0:00:35)[KProgress: 45% (Rate: 933k/s, Estimated time remaining: 0:00:34)[KProgress: 46% (Rate: 805k/s, Estimated time remaining: 0:00:34)[KProgress: 47% (Rate: 705k/s, Estimated time remaining: 0:00:34)[KProgress: 47% (Rate: 572k/s, Estimated time remaining: 0:00:35)[KProgress: 48% (Rate: 453k/s, Estimated time remaining: 0:00:35)[KProgress: 49% (Rate: 453k/s, Estimated time remaining: 0:00:34)[KProgress: 51% (Rate: 581k/s, Estimated time remaining: 0:00:32)[KProgress: 52% (Rate: 673k/s, Estimated time remaining: 0:00:31)[KProgress: 54% (Rate: 822k/s, Estimated time remaining: 0:00:30)[KProgress: 56% (Rate: 933k/s, Estimated time remaining: 0:00:29)[KProgress: 56% (Rate: 812k/s, Estimated time remaining: 0:00:29)[KProgress: 58% (Rate: 810k/s, Estimated time remaining: 0:00:28)[KProgress: 59% (Rate: 764k/s, Estimated time remaining: 0:00:27)[KProgress: 61% (Rate: 796k/s, Estimated time remaining: 0:00:26)[KProgress: 63% (Rate: 796k/s, Estimated time remaining: 0:00:25)[KProgress: 64% (Rate: 917k/s, Estimated time remaining: 0:00:23)[KProgress: 66% (Rate: 898k/s, Estimated time remaining: 0:00:22)[KProgress: 68% (Rate: 980k/s, Estimated time remaining: 0:00:21)[KProgress: 69% (Rate: 932k/s, Estimated time remaining: 0:00:20)[KProgress: 71% (Rate: 932k/s, Estimated time remaining: 0:00:19)[KProgress: 72% (Rate: 911k/s, Estimated time remaining: 0:00:18)[KProgress: 74% (Rate: 923k/s, Estimated time remaining: 0:00:17)[KProgress: 75% (Rate: 865k/s, Estimated time remaining: 0:00:16)[KProgress: 77% (Rate: 863k/s, Estimated time remaining: 0:00:15)[KProgress: 78% (Rate: 863k/s, Estimated time remaining: 0:00:14)[KProgress: 80% (Rate: 884k/s, Estimated time remaining: 0:00:13)[KProgress: 82% (Rate: 893k/s, Estimated time remaining: 0:00:12)[KProgress: 83% (Rate: 928k/s, Estimated time remaining: 0:00:11)[KProgress: 85% (Rate: 930k/s, Estimated time remaining: 0:00:09)[KProgress: 87% (Rate: 924k/s, Estimated time remaining: 0:00:08)[KProgress: 88% (Rate: 924k/s, Estimated time remaining: 0:00:07)[KProgress: 90% (Rate: 924k/s, Estimated time remaining: 0:00:06)[KProgress: 91% (Rate: 927k/s, Estimated time remaining: 0:00:05)[KProgress: 93% (Rate: 921k/s, Estimated time remaining: 0:00:04)[KProgress: 95% (Rate: 927k/s, Estimated time remaining: 0:00:03)[KProgress: 96% (Rate: 927k/s, Estimated time remaining: 0:00:02)[KProgress: 98% (Rate: 927k/s, Estimated time remaining: 0:00:01)[KCopy iso file /home/hamid/.vagrant.d/tmp/VBoxGuestAdditions_4.3.36.iso into the box /tmp/VBoxGuestAdditions.iso
-stdin: is not a tty
-mount: /dev/loop0 is write-protected, mounting read-only
-Installing Virtualbox Guest Additions 4.3.36 - guest version is unknown
-stdin: is not a tty
-Verifying archive integrity... All good.
-Uncompressing VirtualBox 4.3.36 Guest Additions for Linux............
-VirtualBox Guest Additions installer
-Copying additional installer modules ...
-Installing additional modules ...
-Removing existing VirtualBox DKMS kernel modules ...done.
-Removing existing VirtualBox non-DKMS kernel modules ...done.
-Building the VirtualBox Guest Additions kernel modules ...done.
-Doing non-kernel setup of the Guest Additions ...done.
-Starting the VirtualBox Guest Additions ...done.
-Installing the Window System drivers
-Could not find the X.Org or XFree86 Window System, skipping.
-An error occurred during installation of VirtualBox Guest Additions 4.3.36. Some functionality may not work as intended.
-In most cases it is OK that the "Window System drivers" installation failed.
-stdin: is not a tty
-Cleaning up downloaded VirtualBox Guest Additions ISO...
-==> Box Yexpert Debian: Checking for guest additions in VM...
-==> Box Yexpert Debian: Setting hostname...
-==> Box Yexpert Debian: Installing rsync to the VM...
-==> Box Yexpert Debian: Rsyncing folder: /home/hamid/Yrelay/Yexpert-Box/ => /vagrant
-==> Box Yexpert Debian: Running provisioner: shell...
-    Box Yexpert Debian: Running: /tmp/vagrant-shell20170122-27356-bq7cbn.sh
-==> Box Yexpert Debian: stdin: is not a tty
-==> Box Yexpert Debian: !------------------------------------------------------!
-==> Box Yexpert Debian: Utiliser https://github.com/Yrelay/ pour les routines et globales
-==> Box Yexpert Debian: Créer les répertoires de développement : true
-==> Box Yexpert Debian: Installer l'instance nommée : yrelay
-==> Box Yexpert Debian: Installer la partition utilisateur nommée : DMO
-==> Box Yexpert Debian: Installer Yexpert-JS : true
-==> Box Yexpert Debian: Post installation : false
-==> Box Yexpert Debian: Ré-installation : false
-==> Box Yexpert Debian: Passer les tests : false
-==> Box Yexpert Debian: !------------------------------------------------------!
-==> Box Yexpert Debian: Ce script va ajouter vagrant au groupe yrelay
-==> Box Yexpert Debian: Mettre à jour le système d'exploitation
-==> Box Yexpert Debian: E
-==> Box Yexpert Debian: : 
-==> Box Yexpert Debian: Failed to fetch http://httpredir.debian.org/debian/pool/main/c/ca-certificates/ca-certificates_20141019+deb8u2_all.deb  Error reading from server. Remote end closed connection [IP: 128.31.0.66 80]
-==> Box Yexpert Debian: E
-==> Box Yexpert Debian: : 
-==> Box Yexpert Debian: Unable to fetch some archives, maybe run apt-get update or try with --fix-missing?
-==> Box Yexpert Debian: Extracting templates from packages: 12%
-==> Box Yexpert Debian: Extracting templates from packages: 25%
-==> Box Yexpert Debian: Extracting templates from packages: 38%
-==> Box Yexpert Debian: Extracting templates from packages: 51%
-==> Box Yexpert Debian: Extracting templates from packages: 64%
-==> Box Yexpert Debian: Extracting templates from packages: 76%
-==> Box Yexpert Debian: Extracting templates from packages: 89%
-==> Box Yexpert Debian: Extracting templates from packages: 100%
-==> Box Yexpert Debian: Création de ...
-==> Box Yexpert Debian: Reading package lists...
-==> Box Yexpert Debian: Building dependency tree...
-==> Box Yexpert Debian: Reading state information...
-==> Box Yexpert Debian: The following extra packages will be installed:
-==> Box Yexpert Debian:   fis-gtm-6.2-000 icu-devtools libicu-dev libicu52
-==> Box Yexpert Debian: Suggested packages:
-==> Box Yexpert Debian:   icu-doc
-==> Box Yexpert Debian: The following NEW packages will be installed:
-==> Box Yexpert Debian:   fis-gtm fis-gtm-6.2-000 icu-devtools libicu-dev
-==> Box Yexpert Debian: The following packages will be upgraded:
-==> Box Yexpert Debian:   libicu52
-==> Box Yexpert Debian: 1 upgraded, 4 newly installed, 0 to remove and 118 not upgraded.
-==> Box Yexpert Debian: Need to get 11.6 MB/18.4 MB of archives.
-==> Box Yexpert Debian: After this operation, 65.7 MB of additional disk space will be used.
-==> Box Yexpert Debian: Get:1 http://httpredir.debian.org/debian/ jessie/main icu-devtools amd64 52.1-8+deb8u4 [172 kB]
-==> Box Yexpert Debian: Get:2 http://httpredir.debian.org/debian/ jessie/main fis-gtm-6.2-000 amd64 6.2-000-1 [3,795 kB]
-==> Box Yexpert Debian: Get:3 http://httpredir.debian.org/debian/ jessie/main libicu-dev amd64 52.1-8+deb8u4 [7,641 kB]
-==> Box Yexpert Debian: Get:4 http://httpredir.debian.org/debian/ jessie/main fis-gtm all 6.2-000-1 [20.3 kB]
-==> Box Yexpert Debian: Reading changelogs...
-==> Box Yexpert Debian: Fetched 11.6 MB in 13s (885 kB/s)
-==> Box Yexpert Debian: (Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%
-==> Box Yexpert Debian: (Reading database ... 75%
-==> Box Yexpert Debian: (Reading database ... 80%
-==> Box Yexpert Debian: (Reading database ... 85%
-==> Box Yexpert Debian: (Reading database ... 90%
-==> Box Yexpert Debian: (Reading database ... 95%
-==> Box Yexpert Debian: (Reading database ... 100%
-==> Box Yexpert Debian: (Reading database ... 
-==> Box Yexpert Debian: 57138 files and directories currently installed.)
-==> Box Yexpert Debian: Preparing to unpack .../libicu52_52.1-8+deb8u4_amd64.deb ...
-==> Box Yexpert Debian: 
-==> Box Yexpert Debian: Unpacking libicu52:amd64 (52.1-8+deb8u4) over (52.1-8+deb8u3) ...
-==> Box Yexpert Debian: Selecting previously unselected package icu-devtools.
-==> Box Yexpert Debian: Preparing to unpack .../icu-devtools_52.1-8+deb8u4_amd64.deb ...
-==> Box Yexpert Debian: Unpacking icu-devtools (52.1-8+deb8u4) ...
-==> Box Yexpert Debian: Selecting previously unselected package libicu-dev:amd64.
-==> Box Yexpert Debian: Preparing to unpack .../libicu-dev_52.1-8+deb8u4_amd64.deb ...
-==> Box Yexpert Debian: Unpacking libicu-dev:amd64 (52.1-8+deb8u4) ...
-==> Box Yexpert Debian: Selecting previously unselected package fis-gtm-6.2-000:amd64.
-==> Box Yexpert Debian: Preparing to unpack .../fis-gtm-6.2-000_6.2-000-1_amd64.deb ...
-==> Box Yexpert Debian: Unpacking fis-gtm-6.2-000:amd64 (6.2-000-1) ...
-==> Box Yexpert Debian: Selecting previously unselected package fis-gtm.
-==> Box Yexpert Debian: Preparing to unpack .../fis-gtm_6.2-000-1_all.deb ...
-==> Box Yexpert Debian: Unpacking fis-gtm (6.2-000-1) ...
-==> Box Yexpert Debian: Processing triggers for man-db (2.7.0.2-5) ...
-==> Box Yexpert Debian: Setting up libicu52:amd64 (52.1-8+deb8u4) ...
-==> Box Yexpert Debian: Setting up icu-devtools (52.1-8+deb8u4) ...
-==> Box Yexpert Debian: Setting up libicu-dev:amd64 (52.1-8+deb8u4) ...
-==> Box Yexpert Debian: Setting up fis-gtm-6.2-000:amd64 (6.2-000-1) ...
-==> Box Yexpert Debian: Setting up fis-gtm (6.2-000-1) ...
-==> Box Yexpert Debian: Processing triggers for libc-bin (2.19-18+deb8u1) ...
-==> Box Yexpert Debian: Installation de GT.M terminée...
-==> Box Yexpert Debian: Reading package lists...
-==> Box Yexpert Debian: Building dependency tree...
-==> Box Yexpert Debian: Reading state information...
-==> Box Yexpert Debian: The following NEW packages will be installed:
-==> Box Yexpert Debian:   chkconfig
-==> Box Yexpert Debian: 0 upgraded, 1 newly installed, 0 to remove and 118 not upgraded.
-==> Box Yexpert Debian: Need to get 9,766 B of archives.
-==> Box Yexpert Debian: After this operation, 59.4 kB of additional disk space will be used.
-==> Box Yexpert Debian: Get:1 http://httpredir.debian.org/debian/ jessie/main chkconfig all 11.4.54.60.1debian1 [9,766 B]
-==> Box Yexpert Debian: Fetched 9,766 B in 0s (30.8 kB/s)
-==> Box Yexpert Debian: Selecting previously unselected package chkconfig.
-==> Box Yexpert Debian: (Reading database ... 
-==> Box Yexpert Debian: (Reading database ... 5%
-==> Box Yexpert Debian: (Reading database ... 10%
-==> Box Yexpert Debian: (Reading database ... 15%
-==> Box Yexpert Debian: (Reading database ... 20%
-==> Box Yexpert Debian: (Reading database ... 25%
-==> Box Yexpert Debian: (Reading database ... 30%
-==> Box Yexpert Debian: (Reading database ... 35%
-==> Box Yexpert Debian: (Reading database ... 40%
-==> Box Yexpert Debian: (Reading database ... 45%
-==> Box Yexpert Debian: (Reading database ... 50%
-==> Box Yexpert Debian: (Reading database ... 55%
-==> Box Yexpert Debian: (Reading database ... 60%
-==> Box Yexpert Debian: (Reading database ... 65%
-==> Box Yexpert Debian: (Reading database ... 70%
-==> Box Yexpert Debian: (Reading database ... 75%
-==> Box Yexpert Debian: (Reading database ... 80%
-==> Box Yexpert Debian: (Reading database ... 85%
-==> Box Yexpert Debian: (Reading database ... 90%
-==> Box Yexpert Debian: (Reading database ... 95%
-==> Box Yexpert Debian: (Reading database ... 100%
-==> Box Yexpert Debian: (Reading database ... 
-==> Box Yexpert Debian: 57986 files and directories currently installed.)
-==> Box Yexpert Debian: Preparing to unpack .../chkconfig_11.4.54.60.1debian1_all.deb ...
-==> Box Yexpert Debian: Unpacking chkconfig (11.4.54.60.1debian1) ...
-==> Box Yexpert Debian: Processing triggers for man-db (2.7.0.2-5) ...
-==> Box Yexpert Debian: Setting up chkconfig (11.4.54.60.1debian1) ...
-==> Box Yexpert Debian: Créer la base de données
-==> Box Yexpert Debian: Création de la base de données terminée
-==> Box Yexpert Debian: L'instance d'Yexpert yrelay est créée...
-==> Box Yexpert Debian: Cloning into 'Yexpert-M'...
-==> Box Yexpert Debian: Copier les routines
