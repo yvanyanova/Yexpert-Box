@@ -31,40 +31,30 @@ fi
 source /home/y-instance/config/env
 export PATH=$PATH:/usr/local/bin
 
-# Démarrer les services Yexpert-JS
+# Démarrer les services yexpert-...-srv
 start() {
-    # Lancer le debuggeur node-inspector
-    ##echo "Lancer le debuggeur node-inspector"
-    ##su $instance -c "source $basedir/.nvm/nvm.sh && source $basedir/config/env && nvm use $nodever && daemon --name node-inspector -O $basedir/log/node-inspectorOut.log -E $basedir/log/node-inspectorErr.log --chdir $basedir/yexpert-js  -X 'node-inspector --web-port 8089'"
-    # Lancer Yexpert-JS
-    ##echo "Lancer Yexpert-JS"
-    ##su $instance -c "source $basedir/.nvm/nvm.sh && source $basedir/config/env && nvm use $nodever && daemon --name yexpert-js -O $basedir/log/yexpert-jsOut.log -E $basedir/log/yexpert-jsErr.log --chdir $basedir/yexpert-js node ewdStart-gtm.js Yrelay-Config"
-    ##echo "Lancer EWD.js Rest Server"
-    ##su $instance -c "source $basedir/.nvm/nvm.sh && source $basedir/config/env && nvm use $nodever && daemon --name ewdRest -O $basedir/log/ewdRestOut.log -E $basedir/log/ewdRestErr.log --chdir $basedir/yexpert-js node $basedir/yexpert-js/ewdRest.js"
-    echo "Lancer yexpertrpc Server"
-    su $instance -c "source $basedir/.nvm/nvm.sh && source $basedir/config/env && nvm use $nodever && daemon --name yexpertrpc -O $basedir/log/yexpertrpcOut.log -E $basedir/log/yexpertrpcErr.log --chdir $basedir/yexpert-js node $basedir/yexpert-js/node_modules/yexpert-rpc/example/yexpertrpc.js"
-    echo "Lancer ewd-xpress Rest Server"
-    su $instance -c "source $basedir/.nvm/nvm.sh && source $basedir/config/env && nvm use $nodever && daemon --name ewd-xpress-gtm -O $basedir/log/ewd-xpress-gtmOut.log -E $basedir/log/ewd-xpress-gtmErr.log --chdir $basedir/yexpert-js node $basedir/yexpert-js/ewd-xpress-gtm.js Yrelay-Config"
-    echo "Starting EWD Yexpert Term Server"
-    su $instance -c "source $basedir/.nvm/nvm.sh && source $basedir/config/env && nvm use $nodever && cd $basedir/yexpert-js && daemon --name yexpert-term -O $basedir/log/yexpert-termOut.log -E $basedir/log/yexpert-termErr.log --chdir $basedir/yexpert-js node $basedir/yexpert-js/yexpert-termStart.js"
+    echo "Lancer le serveur yexpert-js-srv"
+    su $instance -c "source $basedir/.nvm/nvm.sh && source $basedir/config/env && nvm use $nodever && daemon --name yexpert-js-srv -O $basedir/log/yexpert-js-srvOut.log -E $basedir/log/yexpert-js-srvErr.log --chdir $basedir/yexpert-js node $basedir/yexpert-js/yexpert-js-srv.js Yrelay-Config"
+
+    echo "Lancer le serveur yexpert-term-srv"
+    su $instance -c "source $basedir/.nvm/nvm.sh && source $basedir/config/env && nvm use $nodever && cd $basedir/yexpert-js && daemon --name yexpert-term-srv -O $basedir/log/yexpert-term-srvOut.log -E $basedir/log/yexpert-term-srvErr.log --chdir $basedir/yexpert-js node $basedir/yexpert-js/yexpert-term-srv.js"
+
+    echo "Lancer le serveur yexpert-rpc-srv"
+    su $instance -c "source $basedir/.nvm/nvm.sh && source $basedir/config/env && nvm use $nodever && daemon --name yexpert-rpc-srv -O $basedir/log/yexpert-rpc-srvOut.log -E $basedir/log/yexpert-rpc-srvErr.log --chdir $basedir/yexpert-js node $basedir/yexpert-js/node_modules/yexpert-rpc/example/yexpert-rpc-srv.js"
+
 }
 
-# Stopper les services Yexpert-JS
+# Stopper les services yexpert-...-srv
 stop() {
-    # Stopper EWD.js
-    echo "Arrêter EWD.js"
-    #curl "https://127.0.0.1:8080/ewdjsMgr?password=keepThisSecret%21&exit=true" -k
-    curl "https://127.0.0.1:8080/ewd/ewdMonitor/index.html?password=keepThisSecret!&exit=true#" -k
-    echo "Arrêter le serveur Yexpert-Term"
-    su $instance -c "source $basedir/.nvm/nvm.sh && source $basedir/config/env && nvm use $nodever && daemon --name yexpert-term --stop"
-    echo "Arrêter le serveur EWD.js Rest"
-    su $instance -c "source $basedir/.nvm/nvm.sh && source $basedir/config/env && nvm use $nodever && daemon --name ewdRest --stop"
-    echo "Arrêter le serveur Yexpert-JS"
-    su $instance -c "source $basedir/.nvm/nvm.sh && source $basedir/config/env && nvm use $nodever && daemon --name yexpert-js --stop"
+    echo "Arrêter le serveur yexpert-js-srv"
+    su $instance -c "source $basedir/.nvm/nvm.sh && source $basedir/config/env && nvm use $nodever && daemon --name yexpert-js-srv --stop"
 
-    # Stopper le debuggeur node-inspector
-    echo "Arrêter le debuggeur node-inspector"
-    su $instance -c "source $basedir/.nvm/nvm.sh && source $basedir/config/env && nvm use $nodever && daemon --name node-inspector --stop"
+    echo "Arrêter le serveur yexpert-term-srv"
+    su $instance -c "source $basedir/.nvm/nvm.sh && source $basedir/config/env && nvm use $nodever && daemon --name yexpert-term-srv --stop"
+
+    echo "Arrêter le serveur yexpert-rpc-srv"
+    su $instance -c "source $basedir/.nvm/nvm.sh && source $basedir/config/env && nvm use $nodever && daemon --name yexpert-rpc-srv --stop"
+
 }
 
 case "$1" in
