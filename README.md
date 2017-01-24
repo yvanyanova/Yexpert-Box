@@ -1,4 +1,4 @@
-![yexpert-logo.png](./images/yexpert-logo.png)
+![yexpert_logo.png](./images/yexpert_logo.svg)
 
 # VM de votre système expert...
 
