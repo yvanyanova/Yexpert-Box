@@ -216,12 +216,12 @@ chown -R $instance:$instance $basedir/yexpert-js/www/yexpert
 chmod -R g+rw $basedir/yexpert-js/www/yexpert
 fi
 
-# Créer le répertoire doc utilisé par l'application
-su $instance -c "cd $basedir/yexpert-js/node_modules/yexpert-js && rm -rf doc && mkdir doc"
-su $instance -c "cd $basedir/yexpert-js/node_modules/yexpert-js/src/js && $basedir/yexpert-js/node_modules/.bin/jsdoc app.js --destination ../../doc"
+# Créer le répertoire docs utilisé par l'application
+su $instance -c "cd $basedir/yexpert-js/node_modules/yexpert-js && rm -rf docs && mkdir docs"
+su $instance -c "cd $basedir/yexpert-js/node_modules/yexpert-js && ../.bin/jsdoc lib src -r -d docs"
 # Mettre les droits
-chown -R $instance:$instance $basedir/yexpert-js/node_modules/yexpert-js/doc
-chmod -R g+rw $basedir/yexpert-js/node_modules/yexpert-js/doc
+chown -R $instance:$instance $basedir/yexpert-js/node_modules/yexpert-js/docs
+chmod -R g+rw $basedir/yexpert-js/node_modules/yexpert-js/docs
 
 # ewd-express
 echo "Copier les fichiers ewd-express"
