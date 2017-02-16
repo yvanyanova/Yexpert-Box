@@ -210,10 +210,12 @@ su $instance -c "cd $basedir/yexpert-js/node_modules/yexpert-js && cp -rf src/im
 chown -R $instance:$instance $basedir/yexpert-js/node_modules/yexpert-js/build
 chmod -R g+rw $basedir/yexpert-js/node_modules/yexpert-js/build
 if [ ! -d "$basedir/yexpert-js/www/yexpert" ];then
-su $instance -c "mkdir $basedir/yexpert-js/www/yexpert && cp -rf $basedir/yexpert-js/node_modules/yexpert-js/build/* $basedir/yexpert-js/www/yexpert"
-# Mettre les droits
-chown -R $instance:$instance $basedir/yexpert-js/www/yexpert
-chmod -R g+rw $basedir/yexpert-js/www/yexpert
+  su $instance -c "mkdir $basedir/yexpert-js/www/yexpert && cp -rf $basedir/yexpert-js/node_modules/yexpert-js/build/* $basedir/yexpert-js/www/yexpert"
+  su $instance -c "mkdir $basedir/yexpert-js/www/yexpert/docs && cp -rf $basedir/yexpert-js/node_modules/yexpert-js/docs/* $basedir/yexpert-js/www/yexpert/docs"
+  su $instance -c "mkdir $basedir/yexpert-js/www/yexpert/help && cp -rf $basedir/yexpert-js/node_modules/yexpert-js/help/* $basedir/yexpert-js/www/yexpert/help"
+  # Mettre les droits
+  chown -R $instance:$instance $basedir/yexpert-js/www/yexpert
+  chmod -R g+rw $basedir/yexpert-js/www/yexpert
 fi
 
 # Créer le répertoire docs utilisé par l'application
